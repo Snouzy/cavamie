@@ -123,10 +123,11 @@
 
         {%- endif -%}
 
-
-        {%- if shop.phone -%}
-          <p>{{ shop.phone }}</p>
-        {%- endif -%}
+        <div class="flex col-span-full bg-black">
+          {%- if shop.phone -%}
+            <p>{{ shop.phone }}</p>
+          {%- endif -%}
+        </div>
 
 
       </div>
