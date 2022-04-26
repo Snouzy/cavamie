@@ -22,6 +22,19 @@
         "info": "t:settings_schema.colors.settings.colors_neutral_background_button.info"
       },
       {
+        "type": "color",
+        "id": "colors_text_neutral_button",
+        "default": "#FFD142",
+        "label": "t:settings_schema.colors.settings.colors_text_neutral_button.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_text_default",
+        "default": "#505050",
+        "label": "t:settings_schema.colors.settings.colors_text_default.label",
+        "info": "t:settings_schema.colors.settings.colors_text_default.info"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"
       },
