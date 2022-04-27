@@ -4,13 +4,14 @@
       "type": "main-page",
       "settings": {
         "page_title": "no",
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
     "about-page": {
       "type": "about-page",
       "settings": {
+        "image": "shopify:\/\/shop_images\/SCR-20220424-u1f.png",
         "heading": "about-page",
         "heading_size": "h1",
         "subheading": "Envie de nous écrire ou de nous soumettre une idée ?",
