@@ -3,6 +3,8 @@ module.exports = {
   theme: {
     colors: {
       'default': '#505050',
+      'white': '#ffffff',
+      'logo': '#ff2949'
     },
     // extend: {},
   },

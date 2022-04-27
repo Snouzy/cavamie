@@ -1,35 +1,60 @@
-{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
-
-{%- style -%}
+{{ 'about-page.css' | asset_url | stylesheet_tag }} {%- style -%}
 
 .section-{{section.id}}{
-  display: grid;
+  <!-- display: grid; -->
 }
-.section-{{section.id}}-padding {
-  padding-top: {{section.settings.padding_top | times: 0.75 | round: 0}}px;
-  padding-bottom: {{section.settings.padding_bottom | times: 0.75 | round: 0}}px;
+.section-{{section.id}}{
+  <!-- padding-top: {{section.settings.padding_top | times: 0.75 | round: 0}}px;
+  padding-bottom: {{section.settings.padding_bottom | times: 0.75 | round: 0}}px; -->
 }
 
 @media screen and(min-width: 750px) {
-  .section-{{section.id}}-padding {
-    padding-top: {{section.settings.padding_top}}px;
-    padding-bottom: {{section.settings.padding_bottom}}px;
+  .section-{{section.id}}{
+    <!-- padding-top: {{section.settings.padding_top}}px;
+    padding-bottom: {{section.settings.padding_bottom}}px; -->
   }
 }
 
 {%- endstyle -%}
+<div>
+  <div
+    before=""
+    class="bg-no-repeat flex flex-col justify-center items-center text-logo bg-cover
+      text-6xl"
+    style="background: url({{section.settings.image|image_url}}) no-repeat top center,
+      #6DB3F2; background-size: cover; height: 300px">
+    <p class="font-extralight">La cave des copains</p>
+    <p class="font-light">La cave des copains</p>
+    <p class="font-medium">La cave des copains</p>
+    <p class="font-bold">La cave des copains</p>
+    <p class="font-extrabold">La cave des copains</p>
+  </div>
 
-<div class="color-{{ section.settings.color_scheme }} container mx-auto px-8">
-  ok
+  <div class="color-{{section.settings.color_scheme }} container mx-auto px-10 my-20 md:px-32
+      md:my-28 lg:px-0">
+    <div class="border-logo flex flex-col md:flex-col lg:flex-row content-container">
+      <img class="content-image" srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%} {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%} {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%} {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%} {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%} {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%} {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%} {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%} {{ section.settings.image | image_url }} {{ section.settings.image.width }}w" sizes="100vw" src="{{ section.settings.image | image_url: width: 1500 }}" loading="lazy" alt="{{ section.settings.image.alt | escape }}" width="{{ section.settings.image.width }}" height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}">
 
+      <div class="py-10 px-12 md:py-20 md:px-24">
+        <h1 class="text-4xl mb-12">{{ section.settings.title }}
+        Le concept Cavamie</h1>
+        <p class="font-medium text-xl">{{ section.settings.content }}Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun t ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun t ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% schema %}
 {
-  "name": "Page about us",
+  "name": "Contenu",
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
     {
       "type": "text",
       "id": "heading",
@@ -149,6 +174,7 @@
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
+    
     {
       "type": "range",
       "id": "padding_top",
@@ -175,5 +201,4 @@
       "name": "t:sections.contact-form.presets.name"
     }
   ]
-}
-{% endschema %}
+} {% endschema %}
