@@ -8,49 +8,23 @@
         "padding_bottom": 0
       }
     },
-    "165108082406457e53": {
-      "type": "collage",
-      "blocks": {
-        "16510808246cff6e6d-0": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "description": "Describe the video",
-            "image_padding": false
-          }
-        },
-        "16510808246cff6e6d-1": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "16510808246cff6e6d-2": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "16510808246cff6e6d-0",
-        "16510808246cff6e6d-1",
-        "16510808246cff6e6d-2"
-      ],
+    "about-page": {
+      "type": "about-page",
       "settings": {
-        "heading": "Multimedia collage",
+        "heading": "about-page",
         "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "subheading": "Envie de nous écrire ou de nous soumettre une idée ?",
+        "subheading_size": "h3",
+        "color_scheme": "neutral",
+        "mandatory_field_text": "* champs obligatoires",
+        "write_us": "Nous écrire",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "main",
-    "165108082406457e53"
+    "about-page"
   ]
 }
