@@ -76,6 +76,19 @@
         "label": "t:settings_schema.colors.settings.gradient_accent_2.label"
       },
       {
+        "type": "color",
+        "id": "colors_neutral_gradient",
+        "default": "#FFF",
+        "label": "Dégardé (sans contexte)"
+      },
+      {
+        "type": "color",
+        "id": "colors_base_text_boxes_border",
+        "default": "#FF2949",
+        "label": "Couleur des bordures des boîtes de texte avec image",
+        "info": "Couleur des bordures des boîtes de texte avec image"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.colors.settings.header__2.content"
       },

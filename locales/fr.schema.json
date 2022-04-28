@@ -8,14 +8,17 @@
         },
         "colors_neutral_background_button": {
           "label": "Arrière plan du bouton NEUTRE",
-          "info": "Utilisé sur les pages sans context (contact, etc...)."
+          "info": "Utilisé sur les pages sans contexte (contact, etc...)."
         },
         "colors_text_neutral_button": {
           "label": "Texte du bouton NEUTRE",
-          "info": "Utilisé sur les pages sans context (contact, etc...)."
+          "info": "Utilisé sur les pages sans contexte (contact, etc...)."
         },
         "colors_text_default": {
           "label": "Textes par défaut (menus, titres de page, filtres...) "
+        },
+        "colors_neutral_gradient": {
+          "label": "Dégradé par défaut (sans contexte)"
         },
         "colors_solid_button_labels": {
           "label": "Texte de bouton plein",

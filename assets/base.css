@@ -27,7 +27,7 @@
   --color-text-by-default: var(--color-text-default);
   --color-foreground:  var(--color-neutral-background-button);
   --color-background: white;
-  --gradient-background: rgb(var(--color-base-text));
+  --gradient-background: rgb(var(--color-neutral-gradient));
   font-family: var(--font-heading-family);
 
 }
@@ -726,6 +726,7 @@ details > * {
   --duration-short: 100ms;
   --duration-default: 200ms;
   --duration-long: 500ms;
+  --text-boxes-border-color: rgb(var(--color-base-text-boxes-border));
 }
 
 .underlined-link,

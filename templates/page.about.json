@@ -12,20 +12,54 @@
       "type": "about-page",
       "settings": {
         "image": "shopify:\/\/shop_images\/SCR-20220424-u1f.png",
-        "heading": "about-page",
-        "heading_size": "h1",
-        "subheading": "Envie de nous écrire ou de nous soumettre une idée ?",
-        "subheading_size": "h3",
+        "heading_text": "La cave des copains",
+        "text_color": "#ff2949"
+      }
+    },
+    "1651180021bb8db5c4": {
+      "type": "image-with-text",
+      "blocks": {
+        "16511800212c6cf707-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Le concept Cavamie",
+            "title_color": "#ff2949",
+            "heading_size": "h2"
+          }
+        },
+        "16511800212c6cf707-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun t ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun t ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd<\/p>",
+            "text_color": "#505050",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "16511800212c6cf707-0",
+        "16511800212c6cf707-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/custom_resized_2c7fb074-4a4f-469b-acd5-008e1c05a5b3.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "neutral",
-        "mandatory_field_text": "* champs obligatoires",
-        "write_us": "Nous écrire",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "mobile_content_alignment": "left",
+        "padding_y": 36,
+        "padding_x": 36,
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
   "order": [
     "main",
-    "about-page"
+    "about-page",
+    "1651180021bb8db5c4"
   ]
 }
