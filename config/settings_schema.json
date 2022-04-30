@@ -22,6 +22,19 @@
         "info": "t:settings_schema.colors.settings.colors_neutral_background_button.info"
       },
       {
+        "type": "color",
+        "id": "colors_text_neutral_button",
+        "default": "#FFD142",
+        "label": "t:settings_schema.colors.settings.colors_text_neutral_button.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_text_default",
+        "default": "#505050",
+        "label": "t:settings_schema.colors.settings.colors_text_default.label",
+        "info": "t:settings_schema.colors.settings.colors_text_default.info"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"
       },
@@ -61,6 +74,19 @@
         "id": "gradient_accent_2",
         "type": "color_background",
         "label": "t:settings_schema.colors.settings.gradient_accent_2.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_neutral_gradient",
+        "default": "#FFF",
+        "label": "Dégardé (sans contexte)"
+      },
+      {
+        "type": "color",
+        "id": "colors_base_text_boxes_border",
+        "default": "#FF2949",
+        "label": "Couleur des bordures des boîtes de texte avec image",
+        "info": "Couleur des bordures des boîtes de texte avec image"
       },
       {
         "type": "header",

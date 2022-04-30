@@ -3,6 +3,7 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "page_title": "no",
         "padding_top": 36,
         "padding_bottom": 0
       }
@@ -10,11 +11,15 @@
     "contact-form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "Nous écrire",
         "heading_size": "h1",
-        "color_scheme": "background-1",
+        "subheading": "Envie de nous écrire ou de nous soumettre une idée ?",
+        "subheading_size": "h3",
+        "color_scheme": "neutral",
+        "mandatory_field_text": "* champs obligatoires",
+        "write_us": "Nous écrire",
         "padding_top": 0,
-        "padding_bottom": 100
+        "padding_bottom": 0
       }
     }
   },

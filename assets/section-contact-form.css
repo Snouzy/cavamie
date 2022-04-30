@@ -10,35 +10,7 @@
   margin-top: 0.2rem;
 }
 
-.contact .field {
-  margin-bottom: 1.5rem;
-}
-
-@media screen and (min-width: 750px) {
-  .contact .field {
-    margin-bottom: 2rem;
-  }
-}
-
-.contact__button {
-  margin-top: 3rem;
-}
-
-@media screen and (min-width: 750px) {
-  .contact__button {
-    margin-top: 4rem;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .contact__fields {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-  }
-}
-
-.right {
+.right-section {
   border: var(--inputs-border-width) solid var(--color-logo);
   color: var(--colors_logo);
   border-radius: var(--card-corner-radius);
@@ -47,11 +19,6 @@
   visibility: hidden;
 }
 
-
-.contact-form__wrapper {
-  display: grid;
-  grid-template-columns: minmax(450px, 1fr) 1fr;
-}
 
 .contact {
   width: 100%;
