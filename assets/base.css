@@ -2820,7 +2820,7 @@ details-disclosure > details {
   .content-container--full-width-mobile {
     border-left: none;
     border-right: none;
-    border-radius: 0;
+    /* border-radius: 0; */
   }
   .content-container--full-width-mobile:after {
     display: none;

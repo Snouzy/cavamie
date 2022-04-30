@@ -11,7 +11,7 @@
     "about-page": {
       "type": "about-page",
       "settings": {
-        "image": "shopify:\/\/shop_images\/SCR-20220424-u1f.png",
+        "image": "shopify:\/\/shop_images\/PHOTO_EQUIPE.jpg",
         "heading_text": "La cave des copains",
         "text_color": "#ff2949"
       }
@@ -41,7 +41,7 @@
         "16511800212c6cf707-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/custom_resized_2c7fb074-4a4f-469b-acd5-008e1c05a5b3.jpg",
+        "image": "shopify:\/\/shop_images\/PHOTO_EQUIPE.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -52,14 +52,58 @@
         "mobile_content_alignment": "left",
         "padding_y": 36,
         "padding_x": 36,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "165124814391f6de99": {
+      "type": "image-banner",
+      "blocks": {
+        "16512481426ccc7331-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Notre promesse",
+            "title_color": "#ff2949",
+            "heading_size": "h3",
+            "font_weight": "600"
+          }
+        },
+        "16512481426ccc7331-1": {
+          "type": "text",
+          "settings": {
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun t ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd",
+            "text_color": "#505050",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "16512481426ccc7331-0",
+        "16512481426ccc7331-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Frise_accueil.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "neutral",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "margin_top": 0,
+        "mobile_margin_bottom": 0,
+        "margin_bottom": 100,
+        "margin_x": 0
       }
     }
   },
   "order": [
     "main",
     "about-page",
-    "1651180021bb8db5c4"
+    "1651180021bb8db5c4",
+    "165124814391f6de99"
   ]
 }
