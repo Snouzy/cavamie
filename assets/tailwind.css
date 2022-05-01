@@ -522,6 +522,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2rem;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -540,6 +550,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
 }
 
 .block {
@@ -604,6 +626,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-repeat: no-repeat;
 }
 
+.fill-white {
+  fill: #ffffff;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -660,6 +686,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(80 80 80 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .outline {
   outline-style: solid;
 }
@@ -679,6 +710,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   .tablet\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .sm\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sm\:mt-8 {
+    margin-top: 2rem;
   }
 }
 
