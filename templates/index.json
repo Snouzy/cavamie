@@ -110,7 +110,7 @@
         "stack_images_on_mobile": true,
         "show_text_below": true,
         "show_image_on_mobile": true,
-        "margin_top": 0,
+        "margin_top": 64,
         "mobile_margin_bottom": 0,
         "margin_bottom": 0,
         "margin_x": 0
@@ -139,7 +139,7 @@
           "type": "button",
           "settings": {
             "button_label": "En savoir plus",
-            "button_link": ""
+            "button_link": "shopify:\/\/pages\/about"
           }
         }
       },
@@ -149,19 +149,19 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/SCR-20220424-u1f.png",
+        "image": "shopify:\/\/shop_images\/PHOTO_EQUIPE.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
+        "color_scheme": "neutral",
+        "mobile_content_alignment": "center",
         "padding_y": 36,
         "padding_x": 36,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     },
     "newsletter": {
@@ -197,6 +197,27 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "1651394792e7f4240f": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/SCR-20220426-wy9.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "show_image_on_mobile": false,
+        "margin_top": 64,
+        "mobile_margin_bottom": 0,
+        "margin_bottom": 0,
+        "margin_x": 0
+      }
     }
   },
   "order": [
@@ -204,6 +225,7 @@
     "collage",
     "16513338515cd94fa7",
     "image-with-text-0",
-    "newsletter"
+    "newsletter",
+    "1651394792e7f4240f"
   ]
 }
