@@ -6,7 +6,7 @@
         "slide-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner-vine.webp",
+            "image": "shopify:\/\/shop_images\/poured-beer-pints.jpg",
             "heading": "Bienvenue",
             "title_color": "#ff2949",
             "strong_color": "#ff2949",
@@ -61,38 +61,41 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "6ef411ca-d955-4a61-a06a-525d9a8b6b4f": {
+          "type": "product",
           "settings": {
-            "collection": ""
+            "product": "bombu-rhum",
+            "second_image": false
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "4568e83b-a9bd-4845-a22c-d51958f61f76": {
+          "type": "product",
           "settings": {
-            "collection": ""
+            "product": "champagne-boizel-rose",
+            "second_image": false
           }
         },
-        "collection-2": {
-          "type": "collection",
+        "e1ca64e1-9c94-44cd-83ee-c860c49e90ac": {
+          "type": "product",
           "settings": {
-            "collection": ""
+            "product": "nicolas-feuillate-brut",
+            "second_image": false
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "collection-1",
-        "collection-2"
+        "6ef411ca-d955-4a61-a06a-525d9a8b6b4f",
+        "4568e83b-a9bd-4845-a22c-d51958f61f76",
+        "e1ca64e1-9c94-44cd-83ee-c860c49e90ac"
       ],
       "settings": {
         "heading": "Les nouveautés Cavamie",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "desktop_layout": "right",
         "mobile_layout": "collage",
-        "color_scheme": "background-1",
+        "color_scheme": "neutral",
         "padding_top": 0,
-        "padding_bottom": 24
+        "padding_bottom": 0
       }
     },
     "16513338515cd94fa7": {
@@ -222,6 +225,77 @@
         "margin_bottom": 0,
         "margin_x": 0
       }
+    },
+    "16514230744e9ad20d": {
+      "type": "multicolumn",
+      "blocks": {
+        "16514230741cc2e889-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/assets_minifrise_accueil.png",
+            "background_color": "#f0da6a",
+            "title": "",
+            "text": "<p>Les<\/p><p><strong>Bulles<\/strong><\/p>",
+            "link_label": "Découvrir",
+            "link": "shopify:\/\/collections\/spiritueux"
+          }
+        },
+        "16514230741cc2e889-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/assets_minifrise_vin.png",
+            "background_color": "#a01f1f",
+            "title": "",
+            "text": "<p>Les<br\/><strong>Vins<\/strong><\/p>",
+            "link_label": "Découvrir",
+            "link": "shopify:\/\/collections\/vins"
+          }
+        },
+        "16514230741cc2e889-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/assets_minifrise_bieres.png",
+            "background_color": "#e8b43e",
+            "title": "",
+            "text": "<p>Les<br\/><strong>Bières<\/strong><\/p>",
+            "link_label": "Découvrir",
+            "link": "shopify:\/\/collections\/bieres"
+          }
+        },
+        "1e58ccb4-f12d-4c92-8be9-caf3c90bfaa0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/assets_minifrise_spiritueux.png",
+            "background_color": "#9a4921",
+            "title": "",
+            "text": "<p>Les<br\/><strong>Spiritueux<\/strong><\/p>",
+            "link_label": "Découvrir",
+            "link": "shopify:\/\/collections\/spiritueux-1"
+          }
+        }
+      },
+      "block_order": [
+        "16514230741cc2e889-0",
+        "16514230741cc2e889-1",
+        "16514230741cc2e889-2",
+        "1e58ccb4-f12d-4c92-8be9-caf3c90bfaa0"
+      ],
+      "settings": {
+        "title": "Catégories",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "neutral",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -230,6 +304,7 @@
     "16513338515cd94fa7",
     "image-with-text-0",
     "newsletter",
-    "1651394792e7f4240f"
+    "1651394792e7f4240f",
+    "16514230744e9ad20d"
   ]
 }
