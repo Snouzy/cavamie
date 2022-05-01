@@ -112,7 +112,7 @@
             "type": "announcement",
             "settings": {
               "text": "PROMO : livraison gratuite dès 50€ d’achat aujourd’hui et demain !",
-              "text_color": "#fff",
+              "text_color": "#ffffff",
               "background_color": "#ff2949",
               "color_scheme": "accent-2",
               "link": ""
@@ -128,7 +128,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "color_scheme": "background-1",
+          "color_scheme": "neutral",
           "logo": "shopify:\/\/shop_images\/logo_complet.png",
           "logo_width": 100,
           "logo_position": "middle-left",
@@ -155,8 +155,8 @@
             "settings": {
               "heading": "Liens",
               "menu": "footer",
-              "link_color": "#fff",
-              "link_title_color": "#fff"
+              "link_color": "#ffffff",
+              "link_title_color": "#ffffff"
             }
           },
           "text": {
@@ -164,8 +164,8 @@
             "settings": {
               "heading": "Le site Cavamie",
               "subtext": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.<\/p>",
-              "text_title_color": "#fff",
-              "text_color": "#fff",
+              "text_title_color": "#ffffff",
+              "text_color": "#ffffff",
               "font_weight": "300"
             }
           }
