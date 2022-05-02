@@ -23,7 +23,7 @@
     "heading_scale": 120,
     "type_body_font": "archivo_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1400,
     "spacing_sections": 64,
     "spacing_grid_horizontal": 12,
     "spacing_grid_vertical": 12,
@@ -373,7 +373,6 @@
             "text"
           ],
           "settings": {
-            "color_scheme": "accent-1",
             "newsletter_enable": false,
             "newsletter_heading": "Subscribe to our emails",
             "show_social": true,

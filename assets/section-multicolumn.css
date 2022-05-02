@@ -1,6 +1,6 @@
 
 .multicolumn .grid--1-col-tablet-down .grid__item {
-  max-width: 220px;
+  max-width: 200px;
 }
 
 .multicolumn .title {
@@ -20,9 +20,17 @@
     margin-bottom: 3rem;
   }
 
-  .multicolumn .page-width {
-    padding-left: 0;
-    padding-right: 0;
+ 
+}
+
+@media screen and (max-width: 905px) {
+  .multicolumn-intro-and-slider-wrapper {
+    flex-direction: column;
+  }
+
+  .multicolumn-introduction {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
 }
 
