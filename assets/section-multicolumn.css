@@ -1,6 +1,7 @@
 
 .multicolumn .grid--1-col-tablet-down .grid__item {
-  max-width: 200px;
+  min-width: 195px;
+  max-width: 195px;
 }
 
 .multicolumn .title {

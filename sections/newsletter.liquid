@@ -16,9 +16,14 @@
 {%- endstyle -%}
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div style="border: var(--text-boxes-border-width) solid var(--text-boxes-border-color); border-radius: var(--text-boxes-radius);" class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  {%- unless section.settings.title_section == blank -%}
+    <h2 class="title title_section {{ section.settings.title_alignment }}">{{ section.settings.title_section | escape }}</h2>
+  {%- endunless -%}
+  <div class="newsletter-container">
+  <div style="margin: 2rem; border: var(--text-boxes-border-width) solid var(--text-boxes-border-color); border-radius: var(--text-boxes-radius);" class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
+      <div>
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
@@ -75,6 +80,9 @@
               {%- endif -%}
             {% endform %}
           </div>
+        </div>
+        {% render 'double-email' %}
+      </div>
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -86,6 +94,31 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "title_section",
+      "label": "Titre de la section"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:settings_schema.global.settings.text_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:settings_schema.global.settings.text_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:settings_schema.global.settings.text_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "Alignement du titre"
+    },
     {
       "type": "select",
       "id": "color_scheme",

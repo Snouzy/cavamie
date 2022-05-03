@@ -1,3 +1,20 @@
+.double-email-icon {
+  max-height: 20rem;
+}
+@media screen and (max-width: 949px) {
+  .double-email-icon {
+    display: none;
+  }
+}
+
+.newsletter-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
 .newsletter__wrapper {
   padding-right: calc(4rem / var(--font-body-scale));
   padding-left: calc(4rem / var(--font-body-scale));

@@ -611,6 +611,10 @@ table:not([class]) th {
   text-align: right;
 }
 
+.left {
+  text-align: left;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -910,7 +914,8 @@ summary::-webkit-details-marker {
 /* component-title */
 .title,
 .title-wrapper-with-link {
-  margin: 3rem 0 2rem;
+  margin: 0 0 4rem;
+  color: #505050;
 }
 
 .title-wrapper-with-link .title {
@@ -954,7 +959,7 @@ summary::-webkit-details-marker {
 @media screen and (min-width: 990px) {
   .title,
   .title-wrapper-with-link {
-    margin: 5rem 0 3rem;
+    margin: 0 0 4rem;
   }
 
   .title--primary {

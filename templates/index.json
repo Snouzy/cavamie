@@ -95,7 +95,7 @@
         "desktop_layout": "right",
         "mobile_layout": "collage",
         "color_scheme": "neutral",
-        "padding_top": 0,
+        "padding_top": 32,
         "padding_bottom": 0
       }
     },
@@ -156,114 +156,7 @@
         "stack_images_on_mobile": true,
         "show_text_below": true,
         "show_image_on_mobile": true,
-        "margin_top": 64,
-        "mobile_margin_bottom": 0,
-        "margin_bottom": 0,
-        "margin_x": 0
-      }
-    },
-    "image-with-text-0": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Cavamie c'est qui ?",
-            "title_color": "#ff2949",
-            "heading_size": "h2"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun t ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd<\/p>",
-            "text_color": "#505050",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "En savoir plus",
-            "button_link": "shopify:\/\/pages\/about"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/PHOTO_EQUIPE.jpg",
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "neutral",
-        "mobile_content_alignment": "center",
-        "padding_y": 36,
-        "padding_x": 36,
-        "padding_top": 64,
-        "padding_bottom": 64
-      }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Suis nous et gagne 5% sur ta prochaine commande",
-            "heading_size": "h3",
-            "title_weight": "600",
-            "title_color": "#ff2949"
-          }
-        },
-        "paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Nouveautés, offres « spéciales abonnés » et ventes privées dans ta boîte mail !<\/p>",
-            "text_weight": "300",
-            "text_color": "#505050"
-          }
-        },
-        "email_form": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "paragraph",
-        "email_form"
-      ],
-      "settings": {
-        "color_scheme": "neutral",
-        "full_width": false,
-        "padding_top": 32,
-        "padding_bottom": 32
-      }
-    },
-    "1651394792e7f4240f": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/SCR-20220426-wy9.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": true,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true,
-        "show_image_on_mobile": true,
-        "margin_top": 64,
+        "margin_top": 32,
         "mobile_margin_bottom": 0,
         "margin_bottom": 0,
         "margin_x": 0
@@ -344,8 +237,119 @@
         "color_scheme": "neutral",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 64,
         "padding_bottom": 36
+      }
+    },
+    "image-with-text-0": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cavamie c'est qui ?",
+            "title_color": "#ff2949",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun t ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd<\/p>",
+            "text_color": "#505050",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "En savoir plus",
+            "button_link": "shopify:\/\/pages\/about"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "title_section": "À propos de nous",
+        "title_alignment": "left",
+        "image": "shopify:\/\/shop_images\/PHOTO_EQUIPE.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "neutral",
+        "mobile_content_alignment": "center",
+        "padding_y": 36,
+        "padding_x": 36,
+        "padding_top": 32,
+        "padding_bottom": 64
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Suis nous et gagne 5% sur ta prochaine commande",
+            "heading_size": "h3",
+            "title_weight": "600",
+            "title_color": "#ff2949"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Nouveautés, offres « spéciales abonnés » et ventes privées dans ta boîte mail !<\/p>",
+            "text_weight": "300",
+            "text_color": "#505050"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ],
+      "settings": {
+        "title_section": "Newsletter",
+        "title_alignment": "left",
+        "color_scheme": "neutral",
+        "full_width": false,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "1651394792e7f4240f": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/SCR-20220426-wy9.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "show_image_on_mobile": true,
+        "margin_top": 64,
+        "mobile_margin_bottom": 0,
+        "margin_bottom": 0,
+        "margin_x": 0
       }
     }
   },
@@ -354,9 +358,9 @@
     "collage",
     "165160500937d778d3",
     "16513338515cd94fa7",
+    "16514230744e9ad20d",
     "image-with-text-0",
     "newsletter",
-    "1651394792e7f4240f",
-    "16514230744e9ad20d"
+    "1651394792e7f4240f"
   ]
 }
