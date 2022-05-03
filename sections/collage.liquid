@@ -56,11 +56,12 @@
                 card_product: block.settings.product,
                 media_aspect_ratio: 'adapt',
                 show_secondary_image: block.settings.second_image,
-                extend_height: true
+                extend_height: true,
+                border_color: section.settings.border_color
               %}
             {%- when 'collection' -%}
               {% render 'card-collection',
-                card_collection: block.settings.collection,
+                card_collection: section.settings.collection,
                 media_aspect_ratio: 'adapt',
                 columns: 2,
                 extend_height: true
@@ -160,6 +161,12 @@
       "id": "heading",
       "default": "Multimedia collage",
       "label": "t:sections.collage.settings.heading.label"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "default": "#ff2949",
+      "label": "Bordures"
     },
     {
       "type": "select",
