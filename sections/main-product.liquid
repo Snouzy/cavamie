@@ -31,7 +31,7 @@
     <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
 
-  <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div class="product product--{{ section.settings.media_size }} color-{{ settings.card_color_scheme }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
@@ -206,9 +206,10 @@
             </p>
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
-              <h1>{{ product.title | escape }}</h1>
+              <h1 class="h2 font-bold text-logo" style="letter-spacing: 0;">{{ product.title | escape }}</h1>
+             <script>console.log({{ product | json }});</script>
               <a href="{{ product.url }}" class="product__title">
-                <h2 class="h1">
+                <h2 class="h2">
                   {{ product.title | escape }}
                 </h2>
               </a>
@@ -219,9 +220,11 @@
             </div>
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
               <div class="product__tax caption rte">
+                {% comment %}
                 {%- if shop.taxes_included -%}
                   {{ 'products.product.include_taxes' | t }}
                 {%- endif -%}
+                {% endcomment %}
                 {%- if shop.shipping_policy.body != blank -%}
                   {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                 {%- endif -%}
@@ -234,12 +237,21 @@
                 {{ form | payment_terms }}
               {%- endform -%}
             </div>
+
           {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product__description rte quick-add-hidden">
                 {{ product.description }}
               </div>
             {%- endif -%}
+
+          {% if product.metafields.my_fields.note_de_degustation != blank %}
+            <div class="border-4 border-mustard p-12 rounded-3xl">
+              <h2 class="h3 mb-5 font-bold text-center text-logo">Note de dégustation</h2>
+              <p class="text-center">{{ product.metafields.my_fields.note_de_degustation }}</p>
+            </div>
+          {% endif %}
+
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
@@ -262,7 +274,7 @@
             </div>
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
-              <label class="form__label" for="Quantity-{{ section.id }}">
+              <label class="form__label my-20 mb-10" style="color: #9D9D9D" for="Quantity-{{ section.id }}">
                 {{ 'products.product.quantity.label' | t }}
               </label>
 
@@ -271,7 +283,7 @@
                   <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
                   {% render 'icon-minus' %}
                 </button>
-                <input class="quantity__input"
+                <input class="quantity__input text-white"
                     type="number"
                     name="quantity"
                     id="Quantity-{{ section.id }}"
@@ -498,6 +510,8 @@
         </a>
       </div>
     </div>
+
+    
   </div>
 
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">

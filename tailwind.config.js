@@ -6,6 +6,7 @@ module.exports = {
     colors: {
       'default': '#505050',
       'white': '#ffffff',
+      'mustard': "#F0DA6A",
       'logo': '#ff2949'
     },
     screens: {
