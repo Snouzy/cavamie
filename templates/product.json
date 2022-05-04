@@ -3,13 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -84,7 +77,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "caption",
         "price",
@@ -116,13 +108,17 @@
           "type": "heading",
           "settings": {
             "heading": "Subscribe to our emails",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "title_weight": "300",
+            "title_color": "#ff2949"
           }
         },
         "paragraph": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>",
+            "text_weight": "300",
+            "text_color": "#505050"
           }
         },
         "email_form": {
@@ -137,6 +133,8 @@
         "email_form"
       ],
       "settings": {
+        "title_section": "",
+        "title_alignment": "left",
         "color_scheme": "background-2",
         "full_width": false,
         "padding_top": 40,
@@ -169,7 +167,9 @@
           "disabled": true,
           "settings": {
             "heading": "Image banner",
-            "heading_size": "h1"
+            "title_color": "#ff2949",
+            "heading_size": "h1",
+            "font_weight": "600"
           }
         },
         "165100936429d29ea6-1": {
@@ -177,6 +177,7 @@
           "disabled": true,
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_color": "#505050",
             "text_style": "body"
           }
         },
@@ -209,7 +210,12 @@
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": true,
+        "show_image_on_mobile": false,
+        "margin_top": 36,
+        "mobile_margin_bottom": 0,
+        "margin_bottom": 0,
+        "margin_x": 0
       }
     }
   },

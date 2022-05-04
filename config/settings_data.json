@@ -6,9 +6,9 @@
     "colors_solid_button_labels": "#f2efdd",
     "colors_logo": "#FF2949",
     "colors_accent_1": "#910f3f",
-    "gradient_accent_1": "",
+    "gradient_accent_1": "radial-gradient(rgba(137, 143, 239, 1), rgba(120, 196, 245, 1) 100%)",
     "colors_accent_2": "#910f3f",
-    "gradient_accent_2": "",
+    "gradient_accent_2": "linear-gradient(180deg, rgba(251, 51, 166, 1), rgba(127, 72, 176, 1) 50%, rgba(48, 145, 211, 1) 100%)",
     "colors_neutral_gradient": "#FFF",
     "colors_base_text_boxes_border": "#FF2949",
     "colors_text": "#3d081b",
@@ -128,7 +128,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "color_scheme": "neutral",
+          "color_scheme": "inverse",
           "logo": "shopify:\/\/shop_images\/logo_complet.png",
           "logo_width": 100,
           "logo_position": "middle-left",

@@ -97,11 +97,19 @@
 }
 
 .shopify-payment-button__button--unbranded {
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  /* background-color: rgba(var(--color-button), var(--alpha-button-background));
   color: rgb(var(--color-button-text));
   font-size: 1.4rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
-  letter-spacing: 0.07rem;
+  letter-spacing: 0.07rem; */
+  position: relative; /* mandatory if not the hover is on the whole page */
+  color: #F0DA6A;
+  background-color: white;
+  border-color: #F0DA6A;
+  font-weight: bold;
+  border-radius: 10px;
+  border: var(--inputs-border-width) solid #F0DA6A;
+  margin-bottom: 1rem;
 }
 
 .shopify-payment-button__button--unbranded::selection {
@@ -110,7 +118,8 @@
 
 .shopify-payment-button__button--unbranded:hover,
 .shopify-payment-button__button--unbranded:hover:not([disabled]) {
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: #F0DA6A;
+  color: white;
 }
 
 .shopify-payment-button__more-options {
@@ -168,10 +177,11 @@ variant-selects {
 
 .product-form__input .form__label {
   padding-left: 0;
+  margin-bottom: 2rem;
 }
 
 fieldset.product-form__input .form__label {
-  margin-bottom: 0.2rem;
+  /* margin-bottom: 0.2rem; */
 }
 
 .product-form__input input[type='radio'] {
@@ -258,7 +268,12 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__submit {
+  background-color: #F0DA6A;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
   margin-bottom: 1rem;
+  min-height: 4.6rem;
 }
 
 .no-js .product-form__submit.button--secondary {
@@ -430,7 +445,7 @@ a.product__text {
 }
 
 .product-form__quantity .form__label {
-  margin-bottom: 0.6rem;
+  /* margin-bottom: 0.6rem; */
 }
 
 .product-form__quantity-top .form__label {
