@@ -11,7 +11,8 @@ module.exports = {
       'spirit': "#9A4921",
       'vine': '#A01F1F',
       'beer': "#E8B43E",
-      'bubbles': "#F0DA6A",
+      'bubbles': '#F0DA6A',
+      'main-yellow': '#FFD142',
     },
     screens: {
       'phone': '475px',

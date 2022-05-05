@@ -1,6 +1,6 @@
 /* Color custom properties */
 * {
-  -webkit-font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased;
 }
 
 .color-background-1 {
@@ -71,9 +71,6 @@
   --alpha-link: 0.7;
 }
 
-.main-yellow {
-  color: #FFD142; /*TODO: dynamic*/
-}
 .color-logo {
   color: var(--color-logo);
 }
@@ -2606,9 +2603,11 @@ details[open] > .header__submenu {
 
 /* Header menu */
 .header__inline-menu {
-  margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
+}
+.submenu .header__inline-menu {
+  margin-left: 0;
 }
 
 .header--top-center .header__inline-menu,
