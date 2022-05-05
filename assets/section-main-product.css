@@ -301,7 +301,6 @@ fieldset.product-form__input .form__label {
 
 .shopify-payment-button__button {
   font-size: 1.5rem;
-  letter-spacing: 0.1rem;
 }
 
 /* Product info */
@@ -450,6 +449,80 @@ a.product__text {
 
 .product-form__quantity-top .form__label {
   margin-bottom: 1.2rem;
+}
+
+.main-product-spiritueux .quantity {
+  border: 3px solid #9A4921;
+}
+.main-product-spiritueux .quantity__button, .main-product-spiritueux .quantity__input {
+  color: #9A4921;
+}
+.main-product-spiritueux .product-form__submit {
+  background-color: #9A4921;
+}
+.main-product-spiritueux .shopify-payment-button__button--unbranded {
+  color: #9A4921;
+  border-color: #9A4921;
+}
+.main-product-spiritueux .shopify-payment-button__button--unbranded:hover {
+  color: white;
+  background-color: #9A4921;
+}
+
+.main-product-vine .quantity {
+  border: 3px solid #A01F1F;
+}
+.main-product-vine .quantity__button, .main-product-vine .quantity__input {
+  color: #A01F1F;
+}
+.main-product-vine .product-form__submit {
+  background-color: #A01F1F;
+}
+.main-product-vine .shopify-payment-button__button--unbranded {
+  color: #A01F1F;
+  border-color: #A01F1F;
+}
+.main-product-vine .shopify-payment-button__button--unbranded:hover {
+  color: white;
+  background-color: #A01F1F;
+}
+
+
+.main-product-beer .quantity {
+  border: 3px solid #E8B43E;
+}
+.main-product-beer .quantity__button, .main-product-beer .quantity__input {
+  color: #E8B43E;
+}
+.main-product-beer .product-form__submit {
+  background-color: #E8B43E;
+}
+.main-product-beer .shopify-payment-button__button--unbranded {
+  color: #E8B43E;
+  border-color: #E8B43E;
+}
+.main-product-beer .shopify-payment-button__button--unbranded:hover {
+  color: white;
+  background-color: #E8B43E;
+}
+
+
+.main-product-bubbles .quantity {
+  border: 3px solid #F0DA6A;
+}
+.main-product-bubbles .quantity__button, .main-product-bubbles .quantity__input {
+  color: #F0DA6A;
+}
+.main-product-bubbles .product-form__submit {
+  background-color: #F0DA6A;
+}
+.main-product-bubbles .shopify-payment-button__button--unbranded {
+  color: #F0DA6A;
+  border-color: #F0DA6A;
+}
+.main-product-bubbles .shopify-payment-button__button--unbranded:hover {
+  color: white;
+  background-color: #F0DA6A;
 }
 
 
@@ -702,6 +775,7 @@ a.product__text {
 .product-media-modal__dialog {
   display: flex;
   align-items: center;
+  background: hsl(0deg 0% 100% / 50%);
   height: 100vh;
 }
 
@@ -721,9 +795,9 @@ a.product__text {
     padding-bottom: 2rem;
   }
 
-  .product-media-modal__content > *:not(.active) {
+  /* .product-media-modal__content > *:not(.active) {
     display: block;
-  }
+  } */
 
   .product__modal-opener:not(.product__modal-opener--image) {
     display: none;
@@ -1108,7 +1182,24 @@ a.product__text {
   border-color: rgb(var(--color-foreground));
 }
 
-.thumbnail[aria-current]:focus-visible {
+.main-product-spiritueux .thumbnail[aria-current] {
+  box-shadow: 0 0 0rem 0.1rem #9A4921;
+  border-color: #9A4921;
+}
+.main-product-vine .thumbnail[aria-current] {
+  box-shadow: 0 0 0rem 0.1rem #A01F1F;
+  border-color: #A01F1F;
+}
+.main-product-beer .thumbnail[aria-current] {
+  box-shadow: 0 0 0rem 0.1rem #E8B43E;
+  border-color: #E8B43E;
+}
+.main-product-bubbles .thumbnail[aria-current] {
+  box-shadow: 0 0 0rem 0.1rem #F0DA6A;
+  border-color: #F0DA6A;
+}
+
+/* .thumbnail[aria-current]:focus-visible {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
 }
 
@@ -1121,7 +1212,7 @@ a.product__text {
 .thumbnail[aria-current]:focus:not(:focus-visible) {
   outline: 0;
   box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
-}
+} */
 
 .thumbnail img {
   pointer-events: none;

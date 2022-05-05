@@ -7,7 +7,12 @@ module.exports = {
       'default': '#505050',
       'white': '#ffffff',
       'mustard': "#F0DA6A",
-      'logo': '#ff2949'
+      'logo': '#ff2949',
+      'spirit': "#9A4921",
+      'vine': '#A01F1F',
+      'beer': "#E8B43E",
+      'bubbles': '#F0DA6A',
+      'main-yellow': '#FFD142',
     },
     screens: {
       'phone': '475px',
