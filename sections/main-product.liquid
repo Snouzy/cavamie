@@ -207,6 +207,8 @@
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
               <h1 class="h2 font-bold text-logo" style="letter-spacing: 0;">{{ product.title | escape }}</h1>
+              {% assign product_collection = collection.title | link_to: product_collection.url %}
+              <p>{{product_collection}}</p>
              <script>console.log({{ product | json }});</script>
               <a href="{{ product.url }}" class="product__title">
                 <h2 class="h2">
