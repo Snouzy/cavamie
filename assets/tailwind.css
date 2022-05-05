@@ -629,6 +629,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 1.5rem;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -637,9 +641,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 4px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-mustard {
   --tw-border-opacity: 1;
   border-color: rgb(240 218 106 / var(--tw-border-opacity));
+}
+
+.border-spirit {
+  --tw-border-opacity: 1;
+  border-color: rgb(154 73 33 / var(--tw-border-opacity));
+}
+
+.border-beer {
+  --tw-border-opacity: 1;
+  border-color: rgb(232 180 62 / var(--tw-border-opacity));
+}
+
+.border-vine {
+  --tw-border-opacity: 1;
+  border-color: rgb(160 31 31 / var(--tw-border-opacity));
 }
 
 .bg-cover {
@@ -722,6 +745,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-logo {
   --tw-text-opacity: 1;
   color: rgb(255 41 73 / var(--tw-text-opacity));
+}
+
+.text-spirit {
+  --tw-text-opacity: 1;
+  color: rgb(154 73 33 / var(--tw-text-opacity));
+}
+
+.text-vine {
+  --tw-text-opacity: 1;
+  color: rgb(160 31 31 / var(--tw-text-opacity));
+}
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .outline {
