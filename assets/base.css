@@ -742,6 +742,7 @@ details > * {
 .underlined-link,
 .customer a {
   color: rgba(var(--color-link), var(--alpha-link));
+  text-decoration: underline;
   text-underline-offset: 0.3rem;
   text-decoration-thickness: 0.1rem;
   transition: text-decoration-thickness ease 100ms;
@@ -1487,8 +1488,18 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button.loading > .loading-overlay__spinner .path {
-  stroke: rgb(var(--color-button-text));
+  stroke: #ff2949;
 }
+#icon_awesome-shopping-bag {
+  fill: #ff2949;
+}
+
+.icon.icon-hamburger, .icon-search {
+  color: #ff2949;
+}
+
+
+
 
 /* Button - social share */
 
