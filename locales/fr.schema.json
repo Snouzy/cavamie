@@ -28,6 +28,10 @@
           "label": "Couleur du logo",
           "info": "Utilisé pour les textes, bordures, etc... afin d'avoir une couleur neutre en dehors de tout contexte (vins, bières...)"
         },
+        "colors_main": {
+          "label": "Couleure principale",
+          "info": "Utilisé pour les textes, bordures, etc... afin d'avoir une couleur neutre en dehors de tout contexte (vins, bières...)"
+        },
         "colors_accent_1": {
           "label": "Accentuation 1",
           "info": "Utilisé pour l'arrière-plan de bouton uni."

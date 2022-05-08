@@ -4,7 +4,9 @@
     "colors_text_neutral_button": "#FFF",
     "colors_text_default": "#505050",
     "colors_solid_button_labels": "#f2efdd",
+    "main": "#FF2949",
     "colors_logo": "#FF2949",
+    "colors_main": "#FF2949",
     "colors_accent_1": "#910f3f",
     "gradient_accent_1": "radial-gradient(rgba(137, 143, 239, 1), rgba(120, 196, 245, 1) 100%)",
     "colors_accent_2": "#910f3f",
@@ -123,13 +125,12 @@
         "block_order": [
           "announcement-bar-0"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "header": {
         "type": "header",
         "settings": {
-          "color_scheme": "inverse",
+          "color_scheme": "neutral",
           "logo": "shopify:\/\/shop_images\/logo_complet.png",
           "logo_width": 100,
           "logo_position": "middle-left",
@@ -204,9 +205,7 @@
         }
       }
     },
-    "content_for_index": [
-
-    ]
+    "content_for_index": []
   },
   "presets": {
     "Default": {
@@ -217,6 +216,7 @@
       "gradient_accent_2": "",
       "colors_text": "#3d081b",
       "colors_logo": "#FF2949",
+      "colors_main": "#FF2949",
       "colors_neutral_background_button": "#FFD142",
       "colors_text_neutral_button": "#FFF",
       "colors_text_default": "#505050",
@@ -329,8 +329,7 @@
           "block_order": [
             "announcement-bar-0"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "header": {
           "type": "header",
