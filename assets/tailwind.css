@@ -551,6 +551,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0px;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -561,10 +565,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mr-12 {
   margin-right: 3rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .block {
@@ -674,6 +674,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 209 66 / var(--tw-bg-opacity));
 }
 
+.bg-mustard {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 218 106 / var(--tw-bg-opacity));
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -707,6 +712,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-extralight {

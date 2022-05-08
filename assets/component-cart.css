@@ -95,8 +95,9 @@ cart-items {
   position: absolute;
   line-height: 1;
   height: 1.8rem;
+  font-size: 80%;
   top: -3rem;
-  color: rgba(var(--color-foreground), 0.75);
+  /* color: rgba(var(--color-foreground), 0.75); */
 }
 
 .cart__note .field__input {
@@ -195,6 +196,10 @@ cart-items {
 
 .cart__ctas {
   text-align: center;
+}
+
+cart-note {
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 750px) {

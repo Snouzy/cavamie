@@ -95,6 +95,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   align-content: space-between;
   overflow-y: auto;
   height: 100%;
+  background: white;
 }
 
 .menu-drawer__navigation {

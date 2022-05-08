@@ -129,7 +129,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "color_scheme": "inverse",
+          "color_scheme": "neutral",
           "logo": "shopify:\/\/shop_images\/logo_complet.png",
           "logo_width": 100,
           "logo_position": "middle-left",
