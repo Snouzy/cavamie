@@ -144,6 +144,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer summary.menu-drawer__menu-item {
   padding-right: 5.2rem;
+
 }
 
 .no-js .menu-drawer__menu-item .icon-caret {
@@ -155,7 +156,9 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__close-button:focus,
 .menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
-  color: rgb(var(--color-foreground));
+  /* color: rgb(var(--color-foreground)); */
+  color: rgb(255 41 73);
+  text-decoration: underline;
   background-color: rgba(var(--color-foreground), 0.04);
 }
 

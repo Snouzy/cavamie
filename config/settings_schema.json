@@ -54,6 +54,20 @@
       },
       {
         "type": "color",
+        "id": "main",
+        "default": "#F2EFDD",
+        "label": "Couleur principale",
+        "info": "Couleur principale du site"
+      },
+      {
+        "type": "color",
+        "id": "colors_main",
+        "default": "#FF2949",
+        "label": "t:settings_schema.colors.settings.colors_main.label",
+        "info": "t:settings_schema.colors.settings.colors_main.info"
+      },
+      {
+        "type": "color",
         "id": "colors_accent_1",
         "default": "#FFD142",
         "label": "t:settings_schema.colors.settings.colors_accent_1.label",

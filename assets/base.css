@@ -25,7 +25,7 @@
   --background-neutral-button: var(--color-neutral-background-button);
   --text-neutral-button: var(--color-neutral-text-button);
   --color-text-by-default: var(--color-text-default);
-  --color-foreground:  var(--color-neutral-background-button);
+  --color-foreground:  var(--color-main-rgba);
   --color-background: white;
   --gradient-background: rgb(var(--color-neutral-gradient));
   font-family: var(--font-heading-family);
@@ -69,6 +69,10 @@
 .color-neutral {
   --color-link: var(--color-foreground);
   --alpha-link: 0.7;
+}
+
+.color-neutral {
+  --color-link: var(--color-main-rgba);
 }
 
 .color-logo {
@@ -652,11 +656,13 @@ h6:empty {
 }
 
 .link--text {
-  color: rgb(var(--color-foreground));
+  /* color: rgb(var(--color-foreground)); */
+  color: var(--color-main);
+
 }
 
-.link--text:hover {
-  color: rgba(var(--color-foreground), 0.75);
+.link--text:hover, .predictive-search__item-heading h5 {
+  color: rgba(var(--color-main-rgba), 0.75);
 }
 
 .link-with-icon {
@@ -2055,7 +2061,7 @@ input[type='checkbox'] {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(var(--color-foreground));
+  /* color: rgb(var(--color-foreground)); */
   padding: 0;
 }
 
@@ -2394,7 +2400,7 @@ input[type='checkbox'] {
 }
 
 .header__icon {
-  color: rgb(var(--color-foreground));
+  /* color: rgb(var(--color-foreground)); */
 }
 
 .header__icon span {
@@ -2500,7 +2506,8 @@ details[open] .modal-overlay {
 details[open] .modal-overlay::after {
   position: absolute;
   content: '';
-  background-color: rgb(var(--color-foreground), 0.5);
+  /* background-color: rgb(var(--color-foreground), 0.5); */
+  background-color: rgba(0, 0, 0, 0.9);
   top: 100%;
   left: 0;
   right: 0;

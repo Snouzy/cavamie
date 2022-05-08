@@ -153,6 +153,7 @@
 
 .multicolumn-card__info {
   padding: 2.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .background-none .multicolumn-card__info {
