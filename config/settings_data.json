@@ -4,8 +4,8 @@
     "colors_text_neutral_button": "#FFF",
     "colors_text_default": "#505050",
     "colors_solid_button_labels": "#f2efdd",
-    "main": "#FF2949",
     "colors_logo": "#FF2949",
+    "main": "#FF2949",
     "colors_main": "#FF2949",
     "colors_accent_1": "#910f3f",
     "gradient_accent_1": "radial-gradient(rgba(137, 143, 239, 1), rgba(120, 196, 245, 1) 100%)",
@@ -50,7 +50,7 @@
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 0,
     "inputs_shadow_blur": 0,
-    "card_style": "standard",
+    "card_style": "card",
     "card_image_padding": 0,
     "card_text_alignment": "left",
     "card_color_scheme": "neutral",
@@ -125,7 +125,8 @@
         "block_order": [
           "announcement-bar-0"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "header": {
         "type": "header",
@@ -205,7 +206,9 @@
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
@@ -329,7 +332,8 @@
           "block_order": [
             "announcement-bar-0"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "header": {
           "type": "header",
