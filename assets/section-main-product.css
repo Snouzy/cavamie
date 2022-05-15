@@ -157,11 +157,28 @@
 }
 
 /* Form Elements */
+#quantity-selector-with-alert-wrapper {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr minmax(150px, 200px);
+  flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 350px) {
+    #quantity-selector-with-alert-wrapper {
+      grid-template-columns: 1fr;
+    }
+    #quantity-selector-with-alert-wrapper .alert {
+      grid-area: 1;
+    }
+}
+
 .product-form__input {
   flex: 0 0 100%;
   padding: 0;
-  margin: 0 0 1.2rem 0;
-  max-width: 37rem;
+  /* margin: 0 0 1.2rem 0;
+  max-width: 37rem; */
   min-width: fit-content;
   border: none;
 }
@@ -305,9 +322,9 @@ fieldset.product-form__input .form__label {
 
 /* Product info */
 
-.product__info-container > * + * {
+/* .product__info-container > * + * {
   margin: 1.5rem 0;
-}
+} */
 
 .product__info-container .product-form,
 .product__info-container .product__description {
@@ -1177,9 +1194,12 @@ a.product__text {
   border-radius: 0;
 }
 
+.thumbnail {
+  border-color: #E8B43E;
+}
 .thumbnail[aria-current] {
-  box-shadow: 0 0 0rem 0.1rem rgb(var(--color-foreground));
-  border-color: rgb(var(--color-foreground));
+  box-shadow: 0 0 0rem 0.1rem #E8B43E;
+  border-color: #E8B43E;
 }
 
 .main-product-spiritueux .thumbnail[aria-current] {
