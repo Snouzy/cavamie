@@ -255,7 +255,7 @@ html.no-js .no-js-hidden {
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 5rem;
+  padding: 0 2rem;
 }
 
 .page-width-desktop {
@@ -265,7 +265,7 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    /* padding: 0 5rem; */
+    padding: 0 5rem;
   }
 
   .page-width--narrow {
@@ -1491,6 +1491,7 @@ button.shopify-payment-button__button--unbranded {
   position: absolute;
   height: 100%;
   display: flex;
+  align-items: center;
 }
 
 .button.loading > .loading-overlay__spinner .path {
@@ -2620,10 +2621,10 @@ details[open] > .header__submenu {
 }
 
 /* Product card*/
-.quick-add__submit.button {
-  background-color: #F0DA6A;
-  color: white;
+.quick-add__submit {
+  background-color: #FFD142;
 }
+
 
 .quick-buy__submit.button {
   border: 3px solid #F0DA6A;
