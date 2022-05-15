@@ -326,11 +326,6 @@
                   <p class="text-center">restant{% if stock > 1 %}s{% endif %}</p>
                 </div>
               {% endif %}
-
-              {% comment %} Inventory tracking on product page {% endcomment %}
-              <!-- <div id="variant-inventory" class="{% unless product.current_variant.available %} hide {% endunless %}">
-                Il en reste {{ product.selected_or_first_available_variant.inventory_quantity }} en stock.
-              </div>  -->
             </div>
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
