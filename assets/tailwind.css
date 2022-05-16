@@ -527,16 +527,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 5rem;
 }
 
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -581,36 +571,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2.5rem;
 }
 
-.mr-12 {
-  margin-right: 3rem;
-}
-
-.ml-10 {
-  margin-left: 2.5rem;
-}
-
-.ml-0 {
-  margin-left: 0px;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mb-0 {
   margin-bottom: 0px;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .ml-2 {
   margin-left: 0.5rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
+.mr-12 {
+  margin-right: 3rem;
 }
 
 .block {
@@ -633,24 +607,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
 .h-10 {
   height: 2.5rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-20 {
-  width: 5rem;
 }
 
 .w-12 {
@@ -667,10 +629,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -703,10 +661,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .truncate {
@@ -760,10 +714,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(255 41 73 / var(--tw-border-opacity));
 }
 
-.border-opacity-0 {
-  --tw-border-opacity: 0;
-}
-
 .bg-main-yellow {
   --tw-bg-opacity: 1;
   background-color: rgb(255 209 66 / var(--tw-bg-opacity));
@@ -804,21 +754,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.5rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -830,14 +765,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-center {
   text-align: center;
-}
-
-.align-middle {
-  vertical-align: middle;
-}
-
-.align-bottom {
-  vertical-align: bottom;
 }
 
 .text-3xl {
@@ -931,28 +858,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 5rem;
   }
 
-  .phone\:ml-10 {
-    margin-left: 2.5rem;
-  }
-
-  .phone\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
-  .phone\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .phone\:ml-0 {
-    margin-left: 0px;
-  }
-
   .phone\:mb-20 {
     margin-bottom: 5rem;
   }
 
-  .phone\:mt-4 {
-    margin-top: 1rem;
+  .phone\:mt-0 {
+    margin-top: 0px;
   }
 
   .phone\:grid-cols-2 {
@@ -977,16 +888,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .sm\:justify-between {
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:justify-between {
-    justify-content: space-between;
   }
 }
 

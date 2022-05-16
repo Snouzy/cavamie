@@ -45,9 +45,9 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Cave",
+            "heading": "Producteur",
             "icon": "none",
-            "content": "<p>{{ product.metafields.my_fields.cave | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.my_fields.producteur.value }}<\/p>",
             "page": ""
           }
         },
@@ -91,6 +91,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "default_threshold": 24,
         "gallery_layout": "thumbnail_slider",
         "media_size": "small",
         "mobile_thumbnails": "hide",
