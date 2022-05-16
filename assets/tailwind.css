@@ -472,6 +472,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+@media (min-width: 400px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
 @media (min-width: 475px) {
   .container {
     max-width: 475px;
@@ -611,6 +617,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 2.5rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -645,6 +655,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -870,10 +884,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .phone\:justify-between {
-    justify-content: space-between;
-  }
-
   .phone\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -885,7 +895,19 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 3.75rem;
     line-height: 1;
   }
+}
 
+@media (min-width: 400px) {
+  .xxs\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .xxs\:justify-between {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 640px) {
   .sm\:mt-8 {
     margin-top: 2rem;
   }

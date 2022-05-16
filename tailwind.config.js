@@ -23,6 +23,7 @@ module.exports = {
       'desktop': '1280px',
       // => @media (min-width: 1280px) { ... }
       'xs': '475px',
+      'xxs': '400px',
       ...defaultTheme.screens,
     }
     // extend: {},

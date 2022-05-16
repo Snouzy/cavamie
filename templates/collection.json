@@ -13,7 +13,7 @@
       "settings": {
         "products_per_page": 12,
         "columns_desktop": 3,
-        "image_ratio": "square",
+        "image_ratio": "rectangle",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
