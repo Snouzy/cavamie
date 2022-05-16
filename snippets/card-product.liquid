@@ -12,7 +12,7 @@
     - show_quick_add: {Boolean} Show the quick add button.
     - section_id: {String} The ID of the section that contains this card.
     - border_color: the border of the color
-
+    - is_collage: is the product renderer from collage (optional) default false
     Usage:
     {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
@@ -26,11 +26,22 @@
       assign ratio = 0.8
     elsif card_product.featured_media and media_aspect_ratio == 'adapt'
       assign ratio = card_product.featured_media.aspect_ratio
+    elsif card_product.featured_media and media_aspect_ratio == 'rectangle'
+      assign ratio=1.6
     endif
+
     if ratio == 0 or ratio == nil
       assign ratio = 1
     endif
   -%}
+
+  {% liquid
+    if is_collage != blank or is_collage != nil
+      assign is_collage = true
+    else
+      assign is_collage = false
+    endif
+  %}
   <div class="card-wrapper underline-links-hover">
     <div class="card
       card--{{ settings.card_style }}
@@ -101,14 +112,14 @@
           </div>
         </div>
       </div>
-      <div class="card__content">
-        <div class="card__information">
+      <div class="card__content {% if is_collage == false %} h-full {% endif %}">
+        <div class="card__information flex flex-col">
           <h3 class="text-logo card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"{% if card_product.featured_media or settings.card_style == 'card' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
             <a href="{{ card_product.url }}" class="full-unstyled-link">
               {{ card_product.title | escape }}
             </a>
           </h3>
-          <div class="card-information">
+          <div class="card-information flex items-end flex-1">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
@@ -138,7 +149,7 @@
               </p>
             {%- endif -%}
             
-            <div class="grid grid-cols-1 phone:grid-cols-2 gap-4 items-center justify-center phone:justify-between">
+            <div class="w-full grid grid-cols-1 phone:grid-cols-2 gap-4 items-center justify-center {% if is_collage == false %} xxs:justify-between {% else %} xxs:justify-end {% endif %}">
               <div class="mt-5 phone:mt-0">
               {% render 'price', product: card_product, price_class: '' %}
               </div>

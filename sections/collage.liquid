@@ -3,6 +3,10 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-modal-video.css' | asset_url | stylesheet_tag }}
 
+<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -54,7 +58,9 @@
             {%- when 'product' -%}
               {% render 'card-product',
                 card_product: block.settings.product,
-                media_aspect_ratio: 'adapt',
+                show_quick_add: true,
+                is_collage: true,
+                media_aspect_ratio: 'rectangle',
                 show_secondary_image: block.settings.second_image,
                 extend_height: true,
                 border_color: section.settings.border_color
