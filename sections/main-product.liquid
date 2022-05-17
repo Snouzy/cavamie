@@ -248,6 +248,37 @@
                 {{ product.description }}
               </div>
             {%- endif -%}
+          
+          
+
+          {% liquid assign notes = product.metafields.my_fields.notes.value %}
+          {% if notes != blank %}
+            <div class="grid mt-10 justify-center" style="margin-top: 4rem; margin-bottom: 2.5rem;">
+              {% for item in notes %}
+              {% liquid assign note = item.note | round %}
+                
+                {% if note != 0 and note >= 1 and note <= 5 %}
+                  <div class="bg-mustard px-6 py-6 rounded-3xl flex flex-col justify-evenly" style="min-height: 120px; max-width: 160px">
+                    <div class="flex justify-center">
+                      {% for i in (1..5) %}
+                        {% if i <= note %}
+                          {% comment %} /!\ space is super important. Else it will not be interpreted {% endcomment %}
+                          <div class="h-9 w-9 bg-white border-2 border-white border-solid rounded-full ml-2 first:ml-0"> </div>
+                        {% else %}
+                          <div class="h-9 w-9 bg-mustard border-2 border-white border-solid rounded-full ml-2 first:ml-0"> </div>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+
+                    <div>
+                      <h2 class="font-bold text-center text-white text-3xl">{{ item.nom }}</h2>
+                    </div>
+                  </div>
+                {% endif %}
+                
+              {% endfor %}
+            </div>
+          {% endif %}
 
           {% if product.metafields.my_fields.note_de_degustation != blank %}
             <div class="border-4 border-mustard p-12 rounded-3xl">
