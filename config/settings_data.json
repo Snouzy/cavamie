@@ -91,7 +91,7 @@
     "badge_position": "top left",
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "background-2",
-    "sold_out_badge_color_scheme": "background-1",
+    "sold_out_badge_color_scheme": "background-2",
     "accent_icons": "text",
     "social_twitter_link": "",
     "social_facebook_link": "https:\/\/www.facebook.com\/pages\/category\/Wine-spirits\/La-cave-des-Intenables-Dorlisheim-106527517912554\/",
@@ -139,7 +139,7 @@
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
           "show_line_separator": false,
-          "enable_sticky_header": true,
+          "enable_sticky_header": false,
           "margin_bottom": 0
         }
       },
