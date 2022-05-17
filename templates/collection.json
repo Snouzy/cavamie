@@ -32,21 +32,21 @@
         "165278238692676db9-1": {
           "type": "product",
           "settings": {
-            "product": "moda-talamonti-75cl",
+            "product": "{{ collection.metafields.my_fields.featured_product_1.value }}",
             "second_image": false
           }
         },
         "2a202c4b-5e4a-499e-b4ba-ab201d61c676": {
           "type": "product",
           "settings": {
-            "product": "seigneur-de-paludate-bordeaux-2015",
+            "product": "{{ collection.metafields.my_fields.featured_product_2.value }}",
             "second_image": false
           }
         },
         "aa1d5093-f9ca-4c60-8565-fbda4cf5a849": {
           "type": "product",
           "settings": {
-            "product": "elysian-dayglow-ipa-33cl",
+            "product": "{{ collection.metafields.my_fields.featured_product_3.value }}",
             "second_image": false
           }
         }

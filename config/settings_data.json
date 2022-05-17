@@ -90,7 +90,7 @@
     "drawer_shadow_blur": 0,
     "badge_position": "top left",
     "badge_corner_radius": 40,
-    "sale_badge_color_scheme": "accent-2",
+    "sale_badge_color_scheme": "background-2",
     "sold_out_badge_color_scheme": "background-1",
     "accent_icons": "text",
     "social_twitter_link": "",
