@@ -25,10 +25,52 @@
         "padding_top": 64,
         "padding_bottom": 64
       }
+    },
+    "165278238610918dc8": {
+      "type": "collage",
+      "blocks": {
+        "165278238692676db9-1": {
+          "type": "product",
+          "settings": {
+            "product": "moda-talamonti-75cl",
+            "second_image": false
+          }
+        },
+        "2a202c4b-5e4a-499e-b4ba-ab201d61c676": {
+          "type": "product",
+          "settings": {
+            "product": "seigneur-de-paludate-bordeaux-2015",
+            "second_image": false
+          }
+        },
+        "aa1d5093-f9ca-4c60-8565-fbda4cf5a849": {
+          "type": "product",
+          "settings": {
+            "product": "elysian-dayglow-ipa-33cl",
+            "second_image": false
+          }
+        }
+      },
+      "block_order": [
+        "165278238692676db9-1",
+        "2a202c4b-5e4a-499e-b4ba-ab201d61c676",
+        "aa1d5093-f9ca-4c60-8565-fbda4cf5a849"
+      ],
+      "settings": {
+        "heading": "Les coups de coeur",
+        "border_color": "{{ collection.metafields.my_fields.color.value }}",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "color_scheme": "neutral",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main-collection-banner",
-    "main-product-grid"
+    "main-product-grid",
+    "165278238610918dc8"
   ]
 }
