@@ -30,7 +30,7 @@
   endif
 -%}
 
-<div class="price
+<div class=" text-default font-bold price
   {%- if price_class %} {{ price_class }}{% endif -%}
   {%- if available == false %} price--sold-out {% endif -%}
   {%- if compare_at_price > price %} price--on-sale {% endif -%}
@@ -44,7 +44,7 @@
     {%- endcomment -%}
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-      <span class="price-item price-item--regular">
+      <span class="price-item price-item--regular font-bold text-default">
         {{ money_price }}
       </span>
     </div>
@@ -82,7 +82,7 @@
     </small>
   </div>
   {%- if show_badges -%}
-    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
+    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }} font-light">
       {{ 'products.product.on_sale' | t }}
     </span>
 

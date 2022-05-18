@@ -8,22 +8,33 @@
     }
   }
 {%- endstyle -%}
+{% style %}
+  :root {
+    --color: {{collection.metafields.my_fields.color}};
+  }
+{% endstyle %}
 
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-hero__inner page-width">
     <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title">
+      <h2 class="collection-hero__title text-default">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
-      </h1>
+      </h2>
+
+      {% if collection.metafields.my_fields.subtitle%}
+        <h3 class="collection-hero__subtitle mt-20 font-bold" style="color: var(--color);">
+          {{ collection.metafields.my_fields.subtitle | escape }}
+        </h3>
+      {% endif %}
 
       {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
+        <div class="collection-hero__description mt-16 text-default rte">{{ collection.description }}</div>
       {%- endif -%}
     </div>
 
     {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
+      <div class="collection-hero__image-container gradient">
         <img
           srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
             {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -88,6 +99,10 @@
         {
           "value": "inverse",
           "label": "t:sections.all.colors.inverse.label"
+        },
+        {
+          "value": "neutral",
+          "label": "t:sections.all.colors.neutral.label"
         }
       ],
       "default": "background-1",

@@ -23,15 +23,42 @@
   {%- endstyle -%}
 {%- endif -%}
 
+{%- if section.settings.show_image_on_mobile == false -%}
+  {%- style -%} 
+   @media screen and (max-width: 750px) {
+
+      #Banner-{{ section.id }} .media.banner__media {
+        display: none !important;
+      }
+
+      .banner__content {
+        padding: 2rem;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
 {%- style -%}
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+
+  #Banner-{{ section.id }} {
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+     #Banner-{{ section.id }} {
+       margin-bottom: {{ section.settings.mobile_margin_bottom }}px;
+     }
+  }  
 {%- endstyle -%}
 
-<div id="Banner-{{ section.id }}" class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+<div style="margin-top:{{ section.settings.margin_top }}px;
+          margin-left: {{ section.settings.margin_x }}px;
+          margin-right: {{ section.settings.margin_x }}px;" id="Banner-{{ section.id }}" class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   {%- if section.settings.image != blank -%}
-    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
+    <div class=" banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
       <img
         srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
           {%- if section.settings.image.width >= 550 -%}{{ section.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
@@ -58,7 +85,7 @@
     </div>
   {%- endif -%}
   {%- if section.settings.image_2 != blank -%}
-    <div class="banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}">
+    <div sizes="(min-width: 750px) 50vw" class="banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}">
       <img
         srcset="{%- if section.settings.image_2.width >= 375 -%}{{ section.settings.image_2 | image_url: width: 375 }} 375w,{%- endif -%}
           {%- if section.settings.image_2.width >= 750 -%}{{ section.settings.image_2 | image_url: width: 750 }} 750w,{%- endif -%}
@@ -80,15 +107,15 @@
     </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient" style="border: var(--text-boxes-border-width) solid var(--text-boxes-border-color);">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h2 class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+            <h2 class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }} style="color:{{block.settings.title_color}}; font-weight: {{block.settings.font_weight}};">
               <span>{{ block.settings.heading | escape }}</span>
             </h2>
           {%- when 'text' -%}
-            <div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+            <div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }} style="color:{{block.settings.text_color}}">
               <span>{{ block.settings.text | escape }}</span>
             </div>
           {%- when 'buttons' -%}
@@ -254,6 +281,10 @@
         {
           "value": "inverse",
           "label": "t:sections.all.colors.inverse.label"
+        },
+        {
+          "value": "neutral",
+          "label": "t:sections.all.colors.neutral.label"
         }
       ],
       "default": "background-1",
@@ -295,6 +326,56 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image_on_mobile",
+      "default": false,
+      "label": "Afficher la/les image(s) sur mobile"
+    },
+    {
+      "type": "header",
+      "content": "Marge du bloc"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Marge du haut",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Marge du bas en desktop",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Marge du bas en mobile",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_x",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Horizontal",
+      "default": 0
     }
   ],
   "blocks": [
@@ -310,9 +391,23 @@
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
         },
         {
+          "type": "color",
+          "id": "title_color",
+          "default": "#ff2949",
+          "label": "Couleur du titre"
+        },
+        {
           "type": "select",
           "id": "heading_size",
           "options": [
+            {
+              "value": "h4",
+              "label": "Très très petit (h4)"
+            },
+            {
+              "value": "h3",
+              "label": "Très petit (h3)"
+            },
             {
               "value": "h2",
               "label": "t:sections.all.heading_size.options__1.label"
@@ -328,6 +423,30 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "font_weight",
+          "options": [
+            {
+              "value": "100",
+              "label": "Léger"
+            },
+            {
+              "value": "300",
+              "label": "Normal"
+            },
+            {
+              "value": "600",
+              "label": "gras"
+            },
+            {
+              "value": "900",
+              "label": "Extra gras"
+            }
+          ],
+          "default": "600",
+          "label": "Graisse de la police"
         }
       ]
     },
@@ -341,6 +460,12 @@
           "id": "text",
           "default": "Give customers details about the banner image(s) or content on the template.",
           "label": "t:sections.image-banner.blocks.text.settings.text.label"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "default": "#505050",
+          "label": "Couleur du texte"
         },
         {
           "type": "select",

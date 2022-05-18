@@ -1,0 +1,64 @@
+{{ 'about-page.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+
+{% comment %}
+.section-{{section.id}}{
+  display: grid;
+}
+{% endcomment %}
+
+{% comment %}
+.section-{{section.id}}{
+  padding-top: {{section.settings.padding_top | times: 0.75 | round: 0}}px;
+  padding-bottom: {{section.settings.padding_bottom | times: 0.75 | round: 0}}px;
+}
+{% endcomment %}
+
+{% comment %}
+@media screen and(min-width: 750px) {
+  .section-{{section.id}}{
+    padding-top: {{section.settings.padding_top}}px;
+    padding-bottom: {{section.settings.padding_bottom}}px;
+  }
+}
+{% endcomment %}
+
+{%- endstyle -%}
+<div>
+  <div before="" class="bg-no-repeat flex flex-col justify-center items-center bg-cover
+          text-3xl phone:text-5xl tablet:text-6xl" style="background: url({{section.settings.image|image_url}}) no-repeat top center,
+            #6DB3F2; background-size: cover; height: 300px; color: {{section.settings.text_color}};">
+    <p class="font-extralight">{{ section.settings.heading_text }}</p>
+    <p class="font-light">{{ section.settings.heading_text }}</p>
+    <p class="font-medium" >{{ section.settings.heading_text }}</p>
+    <p class="font-bold" >{{ section.settings.heading_text }}</p>
+    <p class="font-extrabold" >{{ section.settings.heading_text }}</p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "default": "La cave des copains",
+      "label": "Texte"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#ff2949",
+      "label": "Couleur du texte"
+    }
+  ]
+}
+{% endschema %}

@@ -35,11 +35,13 @@
   }
 }
 
+/* on the cart */
 .path {
   stroke-dasharray: 280;
   stroke-dashoffset: 0;
   transform-origin: center;
-  stroke: rgb(var(--color-foreground));
+  /* stroke: rgb(var(--color-foreground)); */
+  stroke: #ff2949;
   animation: dash 1.4s ease-in-out infinite;
 }
 

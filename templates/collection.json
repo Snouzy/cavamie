@@ -4,91 +4,65 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "background-1"
+        "show_collection_image": true,
+        "color_scheme": "neutral"
       }
     },
     "main-product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 20,
-        "columns_desktop": 4,
-        "image_ratio": "adapt",
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "image_ratio": "rectangle",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "enable_filtering": true,
-        "filter_type": "horizontal",
+        "filter_type": "vertical",
         "enable_sorting": true,
         "columns_mobile": "2",
-        "padding_top": 0,
-        "padding_bottom": 24
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     },
-    "newsletter": {
-      "type": "newsletter",
+    "165278238610918dc8": {
+      "type": "collage",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "165278238692676db9-1": {
+          "type": "product",
           "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
+            "product": "{{ collection.metafields.my_fields.featured_product_1.value }}",
+            "second_image": false
           }
         },
-        "paragraph": {
-          "type": "paragraph",
+        "2a202c4b-5e4a-499e-b4ba-ab201d61c676": {
+          "type": "product",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+            "product": "{{ collection.metafields.my_fields.featured_product_2.value }}",
+            "second_image": false
           }
         },
-        "email_form": {
-          "type": "email_form",
+        "e82587ef-f637-4967-a4de-fc299c1c41ba": {
+          "type": "product",
           "settings": {
+            "product": "{{ collection.metafields.my_fields.featured_product_3.value }}",
+            "second_image": false
           }
         }
       },
       "block_order": [
-        "heading",
-        "paragraph",
-        "email_form"
+        "165278238692676db9-1",
+        "2a202c4b-5e4a-499e-b4ba-ab201d61c676",
+        "e82587ef-f637-4967-a4de-fc299c1c41ba"
       ],
       "settings": {
-        "color_scheme": "background-2",
-        "full_width": false,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "collection-list": {
-      "type": "collection-list",
-      "blocks": {
-        "collection-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "collection-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "collection-1"
-      ],
-      "settings": {
-        "title": "Collections",
+        "heading": "Les coups de coeur",
+        "border_color": "{{ collection.metafields.my_fields.color.value }}",
         "heading_size": "h2",
-        "image_ratio": "square",
-        "columns_desktop": 2,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "color_scheme": "neutral",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -97,7 +71,6 @@
   "order": [
     "main-collection-banner",
     "main-product-grid",
-    "newsletter",
-    "collection-list"
+    "165278238610918dc8"
   ]
 }

@@ -1,4 +1,4 @@
-<section id="MainProduct-{{ section.id }}" class="page-width section-{{ section.id }}-padding" data-section="{{ section.id }}">
+<section id="MainProduct-{{ section.id }}" class="main-product-vine page-width section-{{ section.id }}-padding" data-section="{{ section.id }}">
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -59,14 +59,14 @@
               {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
               <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="product__media-item grid__item slider__slide is-active{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ featured_media.id }}">
                 {%- assign media_position = 1 -%}
-                {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false, color: "border-mustard" %}
+                {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false, border_color: "border-vine"%}
               </li>
             {%- endif -%}
             {%- for media in product.media -%}
               {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                 <li id="Slide-{{ section.id }}-{{ media.id }}" class="product__media-item grid__item slider__slide{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
                   {%- assign media_position = media_position | default: 0 | plus: 1 -%}
-                  {% render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: true, color: "border-mustard" %}
+                  {% render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: true, border_color: "border-vine" %}
                 </li>
               {%- endunless -%}
             {%- endfor -%}
@@ -114,7 +114,8 @@
                   assign media_index = media_index | plus: 1
                 -%}
                 <li id="Slide-Thumbnails-{{ section.id }}-0" class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %}" data-target="{{ section.id }}-{{ featured_media.id }}" data-media-position="{{ media_index }}">
-                  <button class="thumbnail global-media-settings global-media-settings--no-shadow {% if featured_media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
+                  {%- comment -%} todo border here{%- endcomment -%}
+                  <button class="thumbnail border-4 border-vine global-media-settings global-media-settings--no-shadow {% if featured_media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
                     aria-label="{%- if featured_media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif featured_media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
                     aria-current="true"
                     aria-controls="GalleryViewer-{{ section.id }}"
@@ -162,7 +163,7 @@
                         {%- render 'icon-play' -%}
                       </span>
                     {%- endif -%}
-                    <button class="thumbnail global-media-settings global-media-settings--no-shadow {% if media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
+                    <button class="thumbnail border-vine border-2 rounded-2xl global-media-settings global-media-settings--no-shadow {% if media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
                       aria-label="{%- if media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
                       {% if media == product.selected_or_first_available_variant.featured_media or product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} aria-current="true"{% endif %}
                       aria-controls="GalleryViewer-{{ section.id }}"
@@ -206,9 +207,7 @@
             </p>
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
-              <h1 class="h2 font-bold text-logo" style="letter-spacing: 0;">{{ product.title | escape }}</h1>
-              {% assign product_collection = collection.title | link_to: product_collection.url %}
-              <p>{{product_collection}}</p>
+              <h1 class="h2 font-bold text-vine" style="letter-spacing: 0;">{{ product.title | escape }}</h1>
              <script>console.log({{ product | json }});</script>
               <a href="{{ product.url }}" class="product__title">
                 <h2 class="h2">
@@ -217,22 +216,20 @@
               </a>
             </div>
           {%- when 'price' -%}
-            <div class="no-js-hidden mb-0" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+            <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
             </div>
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-            {% comment %}
               <div class="product__tax caption rte">
+                {% comment %}
                 {%- if shop.taxes_included -%}
                   {{ 'products.product.include_taxes' | t }}
                 {%- endif -%}
-              </div>
-            {% endcomment %}
-              {%- if shop.shipping_policy.body != blank -%}
-                <div class="product__tax caption rte">
+                {% endcomment %}
+                {%- if shop.shipping_policy.body != blank -%}
                   {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                </div>
-              {%- endif -%}
+                {%- endif -%}
+              </div>
             {%- endif -%}
             <div {{ block.shopify_attributes }}>
               {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
@@ -248,50 +245,17 @@
                 {{ product.description }}
               </div>
             {%- endif -%}
-          
-          
-
-          {% liquid assign notes = product.metafields.my_fields.notes.value %}
-          {% if notes != blank %}
-            <div class="grid mt-10 justify-center" style="margin-top: 4rem; margin-bottom: 2.5rem;">
-              {% for item in notes %}
-              {% liquid assign note = item.note | round %}
-                
-                {% if note != 0 and note >= 1 and note <= 5 %}
-                  <div class="bg-mustard px-6 py-6 rounded-3xl flex flex-col justify-evenly" style="min-height: 120px; max-width: 160px">
-                    <div class="flex justify-center">
-                      {% for i in (1..5) %}
-                        {% if i <= note %}
-                          {% comment %} /!\ space is super important. Else it will not be interpreted {% endcomment %}
-                          <div class="h-9 w-9 bg-white border-2 border-white border-solid rounded-full ml-2 first:ml-0"> </div>
-                        {% else %}
-                          <div class="h-9 w-9 bg-mustard border-2 border-white border-solid rounded-full ml-2 first:ml-0"> </div>
-                        {% endif %}
-                      {% endfor %}
-                    </div>
-
-                    <div>
-                      <h2 class="font-bold text-center text-white text-3xl">{{ item.nom }}</h2>
-                    </div>
-                  </div>
-                {% endif %}
-                
-              {% endfor %}
-            </div>
-          {% endif %}
 
           {% if product.metafields.my_fields.note_de_degustation != blank %}
-            <div class="border-4 border-mustard p-12 rounded-3xl">
-              <h2 class="h3 mb-5 font-bold text-center text-logo">Note de dégustation</h2>
+            <div class="border-2 border-vine p-12 rounded-3xl">
+              <h2 class="h4 mb-5 font-bold text-center text-vine underline">Note de dégustation :</h2>
               <p class="text-center">{{ product.metafields.my_fields.note_de_degustation }}</p>
             </div>
           {% endif %}
 
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
-
           {%- when 'collapsible_tab' -%}
-          {% if block.settings.content != blank %}
             <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
               <details id="Details-{{ block.id }}-{{ section.id }}">
                 <summary>
@@ -303,60 +267,36 @@
                   </div>
                   {% render 'icon-caret' %}
                 </summary>
-                
-                  <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                    {{ block.settings.content }}
-                    {{ block.settings.page.content }}
-                  </div>
+                <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                  {{ block.settings.content }}
+                  {{ block.settings.page.content }}
+                </div>
               </details>
             </div>
-          {% endif %}
-          
           {%- when 'quantity_selector' -%}
-            <div id="quantity-selector-with-alert-wrapper" class="items-end mb:0 phone:mb-20 justify-between product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
-              <div>
-                <label class="form__label mt-4 phone:my-20 mb-10" style="color: #9D9D9D" for="Quantity-{{ section.id }}">
-                  {{ 'products.product.quantity.label' | t }}
-                </label>
+            <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
+              <label class="form__label my-20 mb-10" style="color: #9D9D9D" for="Quantity-{{ section.id }}">
+                {{ 'products.product.quantity.label' | t }}
+              </label>
 
-                <quantity-input class="quantity">
-                  <button class="quantity__button no-js-hidden" name="minus" type="button">
-                    <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
-                    {% render 'icon-minus' %}
-                  </button>
-                  <input class="quantity__input text-white"
-                      type="number"
-                      name="quantity"
-                      id="Quantity-{{ section.id }}"
-                      min="1"
-                      value="1"
-                      form="{{ product_form_id }}"
-                    >
-                  <button class="quantity__button no-js-hidden" name="plus" type="button">
-                    <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-                    {% render 'icon-plus' %}
-                  </button>
-                </quantity-input>
-              </div>
-              <!-- product.metafields.my_fields.quantity_alert -->
-
-              {% liquid 
-                assign stock = product.selected_or_first_available_variant.inventory_quantity
-                if product.metafields.my_fields.quantity_alert != blank
-                  assign threshold = product.metafields.my_fields.quantity_alert
-                else
-                  assign threshold = section.settings.default_threshold
-                endif
-              %}
-
-              {% if stock < threshold and stock != 0 %}
-                <div class="alert p-5 py-10 border-2 border-logo text-logo rounded-3xl">
-                  <h2 class="flex justify-center h3 mb-8 font-bold text-center text-logo">Alerte <span class="h-10 w-12 ml-2 fill-logo">{% render 'icon-clock' %}</span></h2>
-                  <p class="text-center">Quantité basse</p>
-                  <p class="text-center font-bold">{{ stock }}</p>
-                  <p class="text-center">restant{% if stock > 1 %}s{% endif %}</p>
-                </div>
-              {% endif %}
+              <quantity-input class="quantity">
+                <button class="quantity__button no-js-hidden" name="minus" type="button">
+                  <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                  {% render 'icon-minus' %}
+                </button>
+                <input class="quantity__input text-white"
+                    type="number"
+                    name="quantity"
+                    id="Quantity-{{ section.id }}"
+                    min="1"
+                    value="1"
+                    form="{{ product_form_id }}"
+                  >
+                <button class="quantity__button no-js-hidden" name="plus" type="button">
+                  <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                  {% render 'icon-plus' %}
+                </button>
+              </quantity-input>
             </div>
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
@@ -454,7 +394,6 @@
                 </variant-selects>
               {%- endif -%}
             {%- endunless -%}
-
 
             <noscript class="product-form__noscript-wrapper-{{ section.id }}">
               <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
@@ -1071,17 +1010,6 @@
       "id": "enable_sticky_info",
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
-    },
-    {
-      "type": "header",
-      "content": "Alertes"
-    },
-    {
-      "type": "number",
-      "id": "default_threshold",
-      "default": 24,
-      "label": "Définition du seuil d'alerte par défaut",
-      "info": "Par défaut, si aucun seuil n'est défini dans le produit, c'est ce seuil qui sera utilisé."
     },
     {
       "type": "header",

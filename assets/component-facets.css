@@ -3,6 +3,7 @@
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   padding-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 .active-facets-mobile {
@@ -167,6 +168,7 @@
 .facets {
   display: block;
   grid-column-start: span 2;
+  margin-bottom: 2rem;
 }
 
 .facets__form {
@@ -354,6 +356,8 @@
 
 .facets__price .field {
   align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
 }
 
 .facets__price .field-currency {
@@ -383,13 +387,13 @@ button.facets__button {
   width: 100%;
   grid-column: 1 / -1;
   grid-row: 2;
-  margin-top: -0.5rem;
+  /* margin-top: -0.5rem; */
 }
 
 .active-facets__button {
   display: block;
   margin-right: 1.5rem;
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
   padding-left: 0.2rem;
   padding-right: 0.2rem;
   text-decoration: none;
@@ -436,18 +440,18 @@ span.active-facets__button-inner:after {
 
 @media screen and (max-width: 989px) {
   .active-facets {
-    margin: 0 -1.2rem -1.2rem;
+    /* margin: 0 -1.2rem -1.2rem; */
   }
 
   .active-facets__button,
   .active-facets__button-remove {
     margin: 0;
-    padding: 1.2rem;
+    padding: 0.5rem;
   }
 
   span.active-facets__button-inner {
-    padding-bottom: 0.3rem;
-    padding-top: 0.3rem;
+    /* padding-bottom: 0.3rem;
+    padding-top: 0.3rem; */
   }
 
   .active-facets__button-wrapper {
@@ -511,6 +515,12 @@ a.active-facets__button.focused .active-facets__button-inner,
   }
 }
 
+.active-facets__button-inner.button.button--tertiary {
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid;
+}
+
 .active-facets facet-remove:only-child {
   display: none;
 }
@@ -572,7 +582,9 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__inner {
-  background-color: rgb(var(--color-background));
+  /* background-color: rgb(var(--color-background)); */
+  background-color: white;
+
   width: calc(100% - 5rem);
   margin-left: auto;
   height: 100%;
@@ -1095,7 +1107,6 @@ input.mobile-facets__checkbox {
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .facets-vertical .active-facets__button {
-    padding: 1rem;
     margin-bottom: 0;
     margin-left: -0.5rem;
   }

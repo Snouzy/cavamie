@@ -11,7 +11,7 @@
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap" rel="stylesheet">
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
@@ -55,16 +55,20 @@
         --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
-
+        
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
 
         --color-logo: {{ settings.colors_logo }};
         --color-logo-rgba: {{ settings.colors_logo.red }}, {{ settings.colors_logo.green }}, {{ settings.colors_logo.blue }};
-
+        --color-main: {{ settings.colors_main }};
+        --color-main-rgba: {{ settings.colors_main.red }}, {{ settings.colors_main.green }}, {{ settings.colors_main.blue }};
+        
         --color-neutral-background-button: {{ settings.colors_neutral_background_button.red }}, {{ settings.colors_neutral_background_button.green }}, {{ settings.colors_neutral_background_button.blue }};
         --color-neutral-text-button: {{ settings.colors_text_neutral_button.red }}, {{ settings.colors_text_neutral_button.green }}, {{ settings.colors_text_neutral_button.blue }};
         --color-text-default: {{ settings.colors_text_default.red }}, {{ settings.colors_text_default.green }}, {{ settings.colors_text_default.blue }};
+        --color-neutral-gradient: {{ settings.colors_neutral_gradient.red }}, {{ settings.colors_neutral_gradient.green }}, {{ settings.colors_neutral_gradient.blue }};
+        --color-base-text-boxes-border: {{ settings.colors_base_text_boxes_border.red }}, {{ settings.colors_base_text_boxes_border.green }}, {{ settings.colors_base_text_boxes_border.blue }};
 
         --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
         --color-shadow: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
@@ -185,7 +189,7 @@
         min-height: 100%;
         margin: 0;
         font-size: 1.5rem;
-        letter-spacing: 0.06rem;
+        /* letter-spacing: 0.06rem; */
         line-height: calc(1 + 0.8 / var(--font-body-scale));
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);

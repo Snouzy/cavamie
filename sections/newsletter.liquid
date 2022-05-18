@@ -16,15 +16,20 @@
 {%- endstyle -%}
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  {%- unless section.settings.title_section == blank -%}
+    <h2 class="title title_section {{ section.settings.title_alignment }}">{{ section.settings.title_section | escape }}</h2>
+  {%- endunless -%}
+  <div class="newsletter-container">
+  <div style="margin: 2rem; border: var(--text-boxes-border-width) solid var(--text-boxes-border-color); border-radius: var(--text-boxes-radius);" class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
+      <div>
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
-          <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+          <h2 style="font-weight: {{ block.settings.title_weight }}; color: {{ block.settings.title_color }}" class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
         {%- when 'paragraph' -%}
-          <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+          <div style="font-weight: {{ block.settings.text_weight }}; color: {{ block.settings.text_color }}" class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
         {%- when 'email_form' -%}
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form' %}
@@ -54,10 +59,18 @@
                   <label class="field__label" for="NewsletterForm--{{ section.id }}">
                     {{ 'newsletter.label' | t }}
                   </label>
-                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                    {% render 'icon-arrow' %}
-                  </button>
+                  
+                 
                 </div>
+                {%- comment -%}
+                  if we want arrow style juste delete button, button--primary classes and activate the related css
+                {%- endcomment -%}
+                <button type="submit" class="button button--primary newsletter-form__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                  {%- comment -%}
+                    {% render 'icon-arrow' %} -->
+                  {%- endcomment -%}
+                  S'inscrire
+                </button>
                 {%- if form.errors -%}
                   <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
                 {%- endif -%}
@@ -67,6 +80,9 @@
               {%- endif -%}
             {% endform %}
           </div>
+        </div>
+        {% render 'double-email' %}
+      </div>
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -78,6 +94,31 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "title_section",
+      "label": "Titre de la section"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:settings_schema.global.settings.text_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:settings_schema.global.settings.text_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:settings_schema.global.settings.text_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "Alignement du titre"
+    },
     {
       "type": "select",
       "id": "color_scheme",
@@ -101,6 +142,10 @@
         {
           "value": "inverse",
           "label": "t:sections.all.colors.inverse.label"
+        },
+        {
+          "value": "neutral",
+          "label": "t:sections.all.colors.neutral.label"
         }
       ],
       "default": "background-1",
@@ -158,6 +203,14 @@
           "id": "heading_size",
           "options": [
             {
+              "value": "h4",
+              "label": "Très très petit (h4)"
+            },
+            {
+              "value": "h3",
+              "label": "Très petit (h3)"
+            },
+            {
               "value": "h2",
               "label": "t:sections.all.heading_size.options__1.label"
             },
@@ -172,6 +225,36 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "title_weight",
+          "options": [
+            {
+              "value": "100",
+              "label": "Léger"
+            },
+            {
+              "value": "300",
+              "label": "Normal"
+            },
+            {
+              "value": "600",
+              "label": "gras"
+            },
+            {
+              "value": "900",
+              "label": "Extra gras"
+            }
+          ],
+          "default": "300",
+          "label": "Graisse de la police du titre"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "default": "#ff2949",
+          "label": "Couleur du titre"
         }
       ]
     },
@@ -185,6 +268,36 @@
           "id": "text",
           "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
           "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+        },
+        {
+          "type": "select",
+          "id": "text_weight",
+          "options": [
+            {
+              "value": "100",
+              "label": "Léger"
+            },
+            {
+              "value": "300",
+              "label": "Normal"
+            },
+            {
+              "value": "600",
+              "label": "gras"
+            },
+            {
+              "value": "900",
+              "label": "Extra gras"
+            }
+          ],
+          "default": "300",
+          "label": "Graisse de la police du titre"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "default": "#505050",
+          "label": "Couleur du titre"
         }
       ]
     },

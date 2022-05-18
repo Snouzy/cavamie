@@ -5,25 +5,26 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
-  @media screen and (max-width: 749px) {
-    #Slider-{{ section.id }}::before,
-    #Slider-{{ section.id }} .media::before,
-    #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-      padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-      content: '';
-      display: block;
-    }
-  }
 
-  @media screen and (min-width: 750px) {
-    #Slider-{{ section.id }}::before,
-    #Slider-{{ section.id }} .media::before {
-      padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-      content: '';
-      display: block;
-    }
+@media screen and(max-width: 749px) {
+  #Slider-{{section.id}}::before,
+  #Slider-{{section.id}}.media::before,
+  #Slider-{{section.id}}:not(.banner--mobile-bottom) .banner__content::before {
+    padding-bottom: {{1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100}}%;
+    content: '';
+    display: block;
   }
-  {%- endstyle -%}
+}
+
+@media screen and(min-width: 750px) {
+  #Slider-{{section.id}}: : before, #Slider-{{section.id}}.media::before {
+    padding-bottom: {{1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100}}%;
+    content: '';
+    display: block;
+  }
+}
+
+{%- endstyle -%}
 {%- endif -%}
 
 <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
@@ -80,6 +81,18 @@
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
+
+        #Slide-{{ section.id }}-{{ forloop.index }} .content-container {
+          border-width: 0;
+        }
+        #Slide-{{ section.id }}-{{ forloop.index }} .banner__box > .banner__heading {
+          color: {{ block.settings.title_color }};
+        }
+
+        /* custom bold richtext color */
+        #Slide-{{ section.id }}-{{ forloop.index }} .banner__text strong {
+          color: {{ block.settings.strong_color }};
+        }
       </style>
       <div class="slideshow__slide grid__item grid--1-col slider__slide"
         id="Slide-{{ section.id }}-{{ forloop.index }}"
@@ -120,7 +133,7 @@
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
               <div class="banner__text" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.subheading | escape }}</span>
+                {{ block.settings.subheading }}
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
@@ -302,9 +315,29 @@
           "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
         },
         {
+          "type": "color",
+          "id": "title_color",
+          "default": "#ff2949",
+          "label": "Couleur du titre"
+        },
+        {
+          "type": "color",
+          "id": "strong_color",
+          "default": "#ff2949",
+          "label": "Couleur du gras"
+        },
+        {
           "type": "select",
           "id": "heading_size",
           "options": [
+            {
+              "value": "h4",
+              "label": "Très très petit (h4)"
+            },
+            {
+              "value": "h3",
+              "label": "Très petit (h3)"
+            },
             {
               "value": "h2",
               "label": "t:sections.all.heading_size.options__1.label"
@@ -322,10 +355,9 @@
           "label": "t:sections.all.heading_size.label"
         },
         {
-          "type": "text",
+          "type": "richtext",
           "id": "subheading",
-          "default": "Tell your brand's story through images",
-          "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.row_content.label"
         },
         {
           "type": "text",
@@ -449,6 +481,10 @@
             {
               "value": "inverse",
               "label": "t:sections.all.colors.inverse.label"
+            },
+            {
+              "value": "neutral",
+              "label": "t:sections.all.colors.neutral.label"
             }
           ],
           "default": "background-1",

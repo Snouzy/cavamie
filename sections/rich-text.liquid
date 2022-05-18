@@ -5,17 +5,19 @@
 <noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+.section-{{section.id}}-padding {
+  padding-top: {{section.settings.padding_top | times: 0.75 | round: 0}}px;
+  padding-bottom: {{section.settings.padding_bottom | times: 0.75 | round: 0}}px;
+}
+
+@media screen and(min-width: 750px) {
+  .section-{{section.id}}-padding {
+    padding-top: {{section.settings.padding_top}}px;
+    padding-bottom: {{section.settings.padding_bottom}}px;
   }
+}
+
 {%- endstyle -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -28,7 +30,7 @@
           {%- when 'text' -%}
             <div class="rich-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
           {%- when 'button' -%}
-            <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ block.shopify_attributes }}>
+            <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true" {% else %} href="{{ block.settings.button_link }}" {% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ block.shopify_attributes }}>
               {{ block.settings.button_label | escape }}
             </a>
         {%- endcase -%}
@@ -66,6 +68,10 @@
         {
           "value": "inverse",
           "label": "t:sections.all.colors.inverse.label"
+        },
+        {
+          "value": "neutral",
+          "label": "t:sections.all.colors.neutral.label"
         }
       ],
       "default": "background-1",

@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "main-product-spiritueux",
       "blocks": {
         "title": {
           "type": "title",
@@ -91,7 +91,6 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "default_threshold": 24,
         "gallery_layout": "thumbnail_slider",
         "media_size": "small",
         "mobile_thumbnails": "hide",
