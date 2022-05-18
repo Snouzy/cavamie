@@ -43,7 +43,7 @@
           "settings": {
             "heading": "Cave",
             "icon": "none",
-            "content": "<p>{{ product.metafields.my_fields.cave | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.my_fields.producteur | metafield_tag }}<\/p>",
             "page": ""
           }
         },
