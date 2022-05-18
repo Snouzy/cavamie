@@ -13,7 +13,7 @@
       "settings": {
         "products_per_page": 12,
         "columns_desktop": 3,
-        "image_ratio": "rectangle",
+        "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
@@ -29,13 +29,6 @@
     "165278238610918dc8": {
       "type": "collage",
       "blocks": {
-        "165278238692676db9-1": {
-          "type": "product",
-          "settings": {
-            "product": "{{ collection.metafields.my_fields.featured_product_1.value }}",
-            "second_image": false
-          }
-        },
         "2a202c4b-5e4a-499e-b4ba-ab201d61c676": {
           "type": "product",
           "settings": {
@@ -49,12 +42,19 @@
             "product": "{{ collection.metafields.my_fields.featured_product_3.value }}",
             "second_image": false
           }
+        },
+        "165278238692676db9-1": {
+          "type": "product",
+          "settings": {
+            "product": "{{ collection.metafields.my_fields.featured_product_1.value }}",
+            "second_image": false
+          }
         }
       },
       "block_order": [
-        "165278238692676db9-1",
         "2a202c4b-5e4a-499e-b4ba-ab201d61c676",
-        "e82587ef-f637-4967-a4de-fc299c1c41ba"
+        "e82587ef-f637-4967-a4de-fc299c1c41ba",
+        "165278238692676db9-1"
       ],
       "settings": {
         "heading": "Les coups de coeur",
