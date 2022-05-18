@@ -41,6 +41,8 @@
         "16511800212c6cf707-1"
       ],
       "settings": {
+        "title_section": "",
+        "title_alignment": "left",
         "image": "shopify:\/\/shop_images\/PHOTO_EQUIPE.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -85,7 +87,7 @@
         "image": "shopify:\/\/shop_images\/Frise_accueil.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
-        "adapt_height_first_image": false,
+        "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
@@ -93,6 +95,7 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true,
+        "show_image_on_mobile": false,
         "margin_top": 0,
         "mobile_margin_bottom": 0,
         "margin_bottom": 100,

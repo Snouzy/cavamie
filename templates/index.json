@@ -64,22 +64,22 @@
         "6ef411ca-d955-4a61-a06a-525d9a8b6b4f": {
           "type": "product",
           "settings": {
-            "product": "elysian-dayglow-ipa-33cl",
-            "second_image": false
+            "product": "vin-a-berthet-rayne-cairanne-vieilles-vignes",
+            "second_image": true
           }
         },
         "4568e83b-a9bd-4845-a22c-d51958f61f76": {
           "type": "product",
           "settings": {
-            "product": "moda-talamonti-75cl",
-            "second_image": false
+            "product": "a1710-cheval-bondieu",
+            "second_image": true
           }
         },
         "e1ca64e1-9c94-44cd-83ee-c860c49e90ac": {
           "type": "product",
           "settings": {
-            "product": "sauvignon-blanc-marlborough-2018-75cl",
-            "second_image": false
+            "product": "birdie-kaldi",
+            "second_image": true
           }
         }
       },
@@ -144,7 +144,7 @@
     "16513338515cd94fa7": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frise_accueil.png",
+        "image": "shopify:\/\/shop_images\/Frise_accueil_25080b4b-6bd0-4d63-98c8-c1c74f792668.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "adapt_height_first_image": true,
@@ -168,7 +168,6 @@
         "16514230741cc2e889-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/assets_minifrise_accueil.png",
             "background_color": "#f0da6a",
             "title": "",
             "text": "<p>Les<\/p><p><strong>Bulles<\/strong><\/p>",
@@ -179,7 +178,6 @@
         "16514230741cc2e889-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/assets_minifrise_vin.png",
             "background_color": "#a01f1f",
             "title": "",
             "text": "<p>Les<br\/><strong>Vins<\/strong><\/p>",
@@ -190,7 +188,6 @@
         "16514230741cc2e889-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/assets_minifrise_bieres.png",
             "background_color": "#e8b43e",
             "title": "",
             "text": "<p>Les<br\/><strong>Bières<\/strong><\/p>",
@@ -201,7 +198,6 @@
         "1e58ccb4-f12d-4c92-8be9-caf3c90bfaa0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/assets_minifrise_spiritueux.png",
             "background_color": "#9a4921",
             "title": "",
             "text": "<p>Les<br\/><strong>Spiritueux<\/strong><\/p>",
