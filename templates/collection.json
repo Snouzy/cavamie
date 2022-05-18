@@ -43,7 +43,7 @@
             "second_image": false
           }
         },
-        "aa1d5093-f9ca-4c60-8565-fbda4cf5a849": {
+        "e82587ef-f637-4967-a4de-fc299c1c41ba": {
           "type": "product",
           "settings": {
             "product": "{{ collection.metafields.my_fields.featured_product_3.value }}",
@@ -54,7 +54,7 @@
       "block_order": [
         "165278238692676db9-1",
         "2a202c4b-5e4a-499e-b4ba-ab201d61c676",
-        "aa1d5093-f9ca-4c60-8565-fbda4cf5a849"
+        "e82587ef-f637-4967-a4de-fc299c1c41ba"
       ],
       "settings": {
         "heading": "Les coups de coeur",
