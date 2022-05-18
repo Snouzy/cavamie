@@ -26,6 +26,7 @@
         "slide-1": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/PHOTO_EQUIPE.jpg",
             "heading": "Oui, c'est nouveau !",
             "title_color": "#ff2949",
             "strong_color": "#ff2949",
