@@ -114,7 +114,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "PROMO : livraison gratuite dès 50€ d’achat aujourd’hui et demain !",
+              "text": "Bon plan : livraison gratuite dès 110€ d’achat !",
               "text_color": "#ffffff",
               "background_color": "#ff2949",
               "color_scheme": "accent-2",
@@ -133,7 +133,7 @@
         "settings": {
           "color_scheme": "neutral",
           "logo": "shopify:\/\/shop_images\/logo_complet.png",
-          "logo_width": 100,
+          "logo_width": 150,
           "logo_position": "middle-left",
           "submenu": "",
           "menu": "main-menu",
@@ -149,15 +149,25 @@
           "image": {
             "type": "image",
             "settings": {
+              "image": "shopify:\/\/shop_images\/logo_complet_blanc.png",
               "image_width": 100,
               "alignment": "center"
+            }
+          },
+          "c181fc1b-20eb-437d-9c57-46ed54f73e7b": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Menu principal",
+              "menu": "main-menu",
+              "link_color": "#ffffff",
+              "link_title_color": "#ffffff"
             }
           },
           "link-list": {
             "type": "link_list",
             "settings": {
               "heading": "Liens",
-              "menu": "footer",
+              "menu": "a-propos",
               "link_color": "#ffffff",
               "link_title_color": "#ffffff"
             }
@@ -165,8 +175,8 @@
           "text": {
             "type": "text",
             "settings": {
-              "heading": "Le site Cavamie",
-              "subtext": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.<\/p>",
+              "heading": "Avertissement",
+              "subtext": "<p>L'abus d'alcool est dangereux pour la santé, a consommer avec modération.<\/p>",
               "text_title_color": "#ffffff",
               "text_color": "#ffffff",
               "font_weight": "300"
@@ -175,6 +185,7 @@
         },
         "block_order": [
           "image",
+          "c181fc1b-20eb-437d-9c57-46ed54f73e7b",
           "link-list",
           "text"
         ],
