@@ -251,7 +251,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun t ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd<\/p>",
+            "text": "<p>Tu veux en savoir plus sur nous, nos valeurs et notre raison d'être ? Clique sur le bouton pour apprendre à nous connaitre ! <\/p>",
             "text_color": "#505050",
             "text_style": "body"
           }
@@ -272,6 +272,7 @@
       "settings": {
         "title_section": "À propos de nous",
         "title_alignment": "left",
+        "image": "shopify:\/\/shop_images\/PHOTO_EQUIPE.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -329,6 +330,7 @@
     "1651394792e7f4240f": {
       "type": "image-banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/Frise_footer.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": true,
