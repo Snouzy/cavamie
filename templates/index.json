@@ -167,6 +167,7 @@
       "blocks": {
         "16514230741cc2e889-0": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "background_color": "#f0da6a",
             "title": "",
@@ -187,6 +188,7 @@
         },
         "16514230741cc2e889-2": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "background_color": "#e8b43e",
             "title": "",
