@@ -260,7 +260,7 @@
           "type": "button",
           "settings": {
             "button_label": "En savoir plus",
-            "button_link": "shopify:\/\/pages\/about"
+            "button_link": "shopify:\/\/pages\/a-propos"
           }
         }
       },
@@ -272,7 +272,7 @@
       "settings": {
         "title_section": "À propos de nous",
         "title_alignment": "left",
-        "image": "shopify:\/\/shop_images\/PHOTO_EQUIPE.jpg",
+        "image": "shopify:\/\/shop_images\/Image_carroussel_accueil.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
