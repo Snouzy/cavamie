@@ -64,7 +64,7 @@
         "16512481426ccc7331-0": {
           "type": "heading",
           "settings": {
-            "heading": "Notre promesse",
+            "heading": "Notre conseil",
             "title_color": "#ff2949",
             "heading_size": "h3",
             "font_weight": "600"
@@ -73,7 +73,7 @@
         "16512481426ccc7331-1": {
           "type": "text",
           "settings": {
-            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidun t ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd",
+            "text": "Restez connecté et profitez des nouveaux arrivages fréquents de notre site ! Vous souhaitez faire partie des premiers informés ? Souscrivez à notre newsletter, et nous vous communiquerons nos nouvelles références avant tout le monde.",
             "text_color": "#505050",
             "text_style": "body"
           }
