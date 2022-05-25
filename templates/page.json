@@ -27,25 +27,14 @@
             "text_color": "#505050",
             "text_style": "body"
           }
-        },
-        "1651081009616246de-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "1651081009616246de-0",
-        "1651081009616246de-1",
-        "1651081009616246de-2"
+        "1651081009616246de-1"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/Frise_accueil_25080b4b-6bd0-4d63-98c8-c1c74f792668.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
