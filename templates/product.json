@@ -74,6 +74,15 @@
           "settings": {
             "share_label": "Partager le produit"
           }
+        },
+        "c1942ec2-2062-472d-8aa8-a262caf37ba4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Conditions de Livraisons",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -87,7 +96,8 @@
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
-        "share"
+        "share",
+        "c1942ec2-2062-472d-8aa8-a262caf37ba4"
       ],
       "settings": {
         "enable_sticky_info": true,
