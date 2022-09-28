@@ -64,9 +64,9 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Conditions de Livraisons",
-            "icon": "check_mark",
-            "content": "",
-            "page": ""
+            "icon": "none",
+            "content": "<p>{{ product.title }}Conditions de Livraison<\/p>",
+            "page": "conditions-de-livraison"
           }
         },
         "collapsible-row-2": {
