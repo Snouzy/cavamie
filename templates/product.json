@@ -66,7 +66,7 @@
             "heading": "Livraison",
             "icon": "none",
             "content": "<p>{{ product.title }}Livraison<\/p>",
-            "page": "conditions-de-livraison"
+            "page": "livraison"
           }
         },
         "share": {
