@@ -32,21 +32,21 @@
         "2a202c4b-5e4a-499e-b4ba-ab201d61c676": {
           "type": "product",
           "settings": {
-            "product": "{{ collection.metafields.my_fields.featured_product_2.value }}",
+            "product": "ashanti-spiced-red-ashanti",
             "second_image": false
           }
         },
         "e82587ef-f637-4967-a4de-fc299c1c41ba": {
           "type": "product",
           "settings": {
-            "product": "{{ collection.metafields.my_fields.featured_product_3.value }}",
+            "product": "vin-boeckel-cremant-d-alsace-blanc-de-blanc-2018",
             "second_image": false
           }
         },
         "165278238692676db9-1": {
           "type": "product",
           "settings": {
-            "product": "{{ collection.metafields.my_fields.featured_product_1.value }}",
+            "product": "chateeau-de-creissauds-pastis-millesime-2020",
             "second_image": false
           }
         }
