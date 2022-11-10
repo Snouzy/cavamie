@@ -1,11 +1,11 @@
 {
   "store": {
-    "plan": "basic",
+    "plan": null,
     "theme": "cavamie\/master",
     "primaryLocale": "fr",
     "adminMode": false
   },
-  "tsPublished": 1668086453,
+  "tsPublished": 1668086470,
   "declaration": {
     "showPurpose": false,
     "showProvider": false,
@@ -338,19 +338,268 @@
   },
   "cookies": {
     "0": [
-
+      {
+        "name": "keep_alive",
+        "domain": "cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "purpose": {
+          "fr": "Utilisé en relation avec la localisation de l'acheteur."
+        }
+      },
+      {
+        "name": "secure_customer_sig",
+        "domain": "cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "purpose": {
+          "fr": "Utilisé en relation avec la connexion client."
+        }
+      },
+      {
+        "name": "localization",
+        "domain": "cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "purpose": {
+          "fr": "Localisation de boutique Shopify"
+        }
+      },
+      {
+        "name": "_shopify_tw",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "14 day(s)",
+        "purpose": {
+          "fr": "Utilisé pour gérer les paramètres de confidentialité des clients."
+        }
+      },
+      {
+        "name": "_shopify_m",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "purpose": {
+          "fr": "Utilisé pour gérer les paramètres de confidentialité des clients."
+        }
+      },
+      {
+        "name": "_shopify_tm",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "purpose": {
+          "fr": "Utilisé pour gérer les paramètres de confidentialité des clients."
+        }
+      },
+      {
+        "name": "cart_currency",
+        "domain": "cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "14 day(s)",
+        "purpose": {
+          "fr": "Le cookie est nécessaire pour la fonction de paiement et de paiement sécurisé sur le site Web. Cette fonction est fournie par shopify.com."
+        }
+      },
+      {
+        "name": "cart_sig",
+        "domain": "cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "14 day(s)",
+        "purpose": {
+          "fr": "Analyses Shopify."
+        }
+      },
+      {
+        "name": "_tracking_consent",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "purpose": {
+          "fr": "Préférences de suivi."
+        }
+      }
     ],
     "1": [
-
+      {
+        "name": "_orig_referrer",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "14 day(s)",
+        "purpose": {
+          "fr": "Suit les pages de destination."
+        }
+      },
+      {
+        "name": "_y",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "purpose": {
+          "fr": "Analyses Shopify."
+        }
+      },
+      {
+        "name": "_landing_page",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "14 day(s)",
+        "purpose": {
+          "fr": "Suit les pages de destination."
+        }
+      },
+      {
+        "name": "_s",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "purpose": {
+          "fr": "Analyses Shopify."
+        }
+      },
+      {
+        "name": "_shopify_y",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "purpose": {
+          "fr": "Analyses Shopify."
+        }
+      },
+      {
+        "name": "_shopify_s",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "purpose": {
+          "fr": "Analyses Shopify."
+        }
+      },
+      {
+        "name": "_shopify_sa_t",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "purpose": {
+          "fr": "Analyses Shopify relatives au marketing et aux références."
+        }
+      },
+      {
+        "name": "_shopify_sa_p",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "purpose": {
+          "fr": "Analyses Shopify relatives au marketing et aux références."
+        }
+      }
     ],
     "2": [
-
+      {
+        "name": "_gid",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Google",
+        "firstParty": true,
+        "retention": "24 hour(s)",
+        "purpose": {
+          "fr": "Le cookie est placé par Google Analytics pour compter et suivre les pages vues."
+        }
+      },
+      {
+        "name": "_ga",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Google",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "purpose": {
+          "fr": "Le cookie est défini par Google Analytics avec une fonctionnalité inconnue"
+        }
+      },
+      {
+        "name": "_gat",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Google",
+        "firstParty": true,
+        "retention": "48 second(s)",
+        "purpose": {
+          "fr": "Le cookie est placé par Google Analytics pour filtrer les requêtes des bots."
+        }
+      }
     ],
     "4": [
 
     ],
     "8": [
-
+      {
+        "name": "sib_cuid",
+        "domain": ".cavamie.fr",
+        "path": "\/",
+        "provider": "Unknown",
+        "firstParty": true,
+        "retention": "182 day(s)",
+        "purpose": {
+          "fr": ""
+        }
+      },
+      {
+        "name": "cbuid_meta",
+        "domain": "cavamie.fr",
+        "path": "\/",
+        "provider": "Unknown",
+        "firstParty": true,
+        "retention": "7 day(s)",
+        "purpose": {
+          "fr": ""
+        }
+      },
+      {
+        "name": "uuid",
+        "domain": "sibautomation.com",
+        "path": "\/",
+        "provider": "Unknown",
+        "firstParty": false,
+        "retention": "182 day(s)",
+        "purpose": {
+          "fr": ""
+        }
+      }
     ]
   },
   "blocker": {
