@@ -120,10 +120,21 @@
               "color_scheme": "accent-2",
               "link": ""
             }
+          },
+          "6cd06812-ba01-4b85-8b81-40735b06df0f": {
+            "type": "announcement",
+            "settings": {
+              "text": "",
+              "text_color": "#fff",
+              "background_color": "#ff2949",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
           }
         },
         "block_order": [
-          "announcement-bar-0"
+          "announcement-bar-0",
+          "6cd06812-ba01-4b85-8b81-40735b06df0f"
         ],
         "settings": {
         }
