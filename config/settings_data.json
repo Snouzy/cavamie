@@ -346,7 +346,9 @@
               "settings": {
                 "text": "Welcome to our store",
                 "color_scheme": "accent-2",
-                "link": ""
+                "link": "",
+                "text_color": "#fff",
+                "background_color": "#ff2949"
               }
             }
           },
@@ -375,21 +377,33 @@
               "type": "image",
               "settings": {
                 "image_width": 80,
-                "alignment": "center"
+                "alignment": "center",
+                "link_color": "#505050",
+                "link_title_color": "#505050",
+                "text_title_color": "#505050",
+                "text_color": "#505050"
               }
             },
             "link-list": {
               "type": "link_list",
               "settings": {
                 "heading": "Quick links",
-                "menu": "footer"
+                "menu": "footer",
+                "link_color": "#505050",
+                "link_title_color": "#505050",
+                "text_title_color": "#505050",
+                "text_color": "#505050"
               }
             },
             "text": {
               "type": "text",
               "settings": {
                 "heading": "Heading",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>",
+                "link_color": "#505050",
+                "link_title_color": "#505050",
+                "text_title_color": "#505050",
+                "text_color": "#505050"
               }
             }
           },
@@ -399,6 +413,7 @@
             "text"
           ],
           "settings": {
+            "background_color": "#ff2949",
             "newsletter_enable": false,
             "newsletter_heading": "Subscribe to our emails",
             "show_social": true,
